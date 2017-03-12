@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!--<link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/base1.css"/>
+    <link rel="stylesheet" href="css/youhuijian1.css"/>
+    <!--<link rel="stylesheet" href="css/lunbo.css" />-->
+    <!--<script src="lib/html5shiv/html5shiv.min.js"></script>-->
+    <!--<script src="lib/respond/respond.js"></script>-->
+    <!--导航-->
+</head>
+<body>
+<div class="nav_1">
+    <div class="you">
+        <a href="coupon.html" ></a>
+    </div>
+    <h1>优惠券</h1>
+    <div class="zuo">
+        <a href="http://m.manmanbuy.com/?o=download"></a>
+    </div>
+</div>
+<div class="chen"></div>
+<p class="p">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+<!--end-->
+    <ul class="libiao">
+
+    </ul>
+<div class="zezao">
+        <div class="lun">
+            <ul class="lunbo">
+
+            </ul>
+        </div>
+    <div class="anniu">
+        <span class="you1">></span>
+        <span class="zuo1"><</span>
+    </div>
+</div>
+<!--产品-->
+<div class="weibu">
+    <div class="den1"><a href="">登陆</a></div>
+    <div class="den1"><a href="">注册</a></div>
+    <div class="den1"><a href="index.html"><img src="images/top.jpg" alt=""/>返回顶部</a></div>
+    <p><span>手机APP下载</span> 慢慢买手机版 <span>-- 掌上比价平台</span></p>
+    <p>m.manmanbuy.com </p>
+</div>
+
+<script type="text/templatw" id="chanpin1">
+     <%for(var i=0;i<items["result"].length;i++){%>
+           <li class="ff" index=<%=items["result"][i].couponProductId%>>
+            <a href="javascript:;" >
+                <div><%=#items["result"][i].couponProductImg%></div>
+                <div>
+                    <p><%=items["result"][i].couponProductName%></p>
+                    <h2><%=items["result"][i].couponProductPrice%></h2>
+                    <span><%=items["result"][i].couponProductTime%></span>
+                </div>
+               <div class="img"><img src="images/icon_bar.jpg" alt=""/></div>
+            </a>
+        </li>
+    <%}%>
+</script>
+<script type="text/templatw" id="chanpin2">
+     <%for(var i=0;i<items["result"].length;i++){%>
+            <li class="item2">
+                  <%=#items["result"][i].couponProductImg%>
+            </li>
+    <%}%>
+</script>
+<!--222222-->
+
+</body>
+<script src="js/jquery.min.js"></script>
+<!--<script src="lib/bootstrap/js/bootstrap.min.js"></script>-->
+<script src="js/template-native.js"></script>
+<script src="js/base1.js"></script>
+<script src="js/couponproduct1.js"></script>
+
+</html>

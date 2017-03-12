@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="manmanmai.ico"/>
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+        }
+        .content {
+            max-width: 640px;
+            min-width: 320px;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            border: 1px solid #cccccc;
+            background: url("images/bg.jpg");
+            background-position: center center;
+            position: relative;
+        }
+        .content a {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+        }
+        .content a img {
+            width: 100%;
+            display: block;
+        }
+        .content>input  {
+            background: linear-gradient(to right,#fe8a00,#ffb400);
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            background: linear-gradient(to right,#fe8a00,#ffb400);
+            border: none;
+            outline: none;
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+        }
+        .bg {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .2);
+            display: none;
+        }
+        .red-msg {
+            position: absolute;
+            background: url('images/TB1kQkENFXXXXbTXVXXXXXXXXXX-563-727.png');
+            -webkit-background-size: 250px 350px;
+            background-size: 250px 350px;
+            width: 250px;
+            height: 300px;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%);
+            margin-top: -150px;
+            display: none;
+        }
+        .red-msg .logo {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            right: 0;
+            /*transform: translateX(-50%);*/
+            top: 0;
+        }
+        .red-msg .logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 30px;
+            transform: rotate(35deg);
+        }
+        .red-msg span {
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            width: 100px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .red-msg  p {
+            font-size: 20px;
+            color: #cccccc;
+            margin-left: 10px;
+            margin-top: 25px;
+        }
+        .red-msg input {
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            background: linear-gradient(to right,#fe8a00,#ffb400);
+            border: none;
+            outline: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 50px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var red = document.querySelector(".content");
+            var redMsg = document.querySelector(".red-msg");
+            var span = document.querySelector("span");
+            var timerId = null;
+            function playGame() {
+                    var a = document.createElement("a");
+                    red.appendChild(a);
+                    var str = '<img src="images/1071645_480.png" alt=""/>';
+                    a.innerHTML += str;
+
+                    var x = parseInt(Math.random()*250+50);
+                    var y = parseInt(Math.random()*400);
+
+                    a.style.left = x + "px";
+                    a.style.top = y + "px";
+
+                    a.onclick = function() {
+                        clearInterval(timerId);
+                        var arr =["好可惜没有中奖！","么么哒，没抢到！","听说面向东方更容易中奖！","抢到1元红包","抢到2元红包","香菇蓝瘦，再试试！","抢到5元红包","抢到10元红包","喵了个咪，没抢到！"];
+                        var rad = Math.floor(Math.random()*9);
+                        span.innerText= arr[rad];
+                        redMsg.parentNode.style.display = "block";
+                        redMsg.style.display = "block";
+                    }
+                    setTimeout(function () {
+                        red.removeChild(a);
+                    },1000)
+                }
+            timerId = setInterval(playGame,1200);
+
+            var input = document.querySelector("input");
+            input.onclick = function () {
+                redMsg.parentNode.style.display = "none";
+                redMsg.style.display = "none";
+                timerId = setInterval(playGame,1200);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <!--<a href="">-->
+            <!--<img src="images/1071645_480.png" alt=""/>-->
+        <!--</a>-->
+        <div class="bg">
+            <div class="red-msg">
+                <div class="logo">
+                    <img src="images/cat.bmp" alt=""/>
+                </div>
+                <p>红包君来了！！！</p>
+                <span></span>
+                <input type="button" value="再玩一次"/>
+            </div>
+        </div>
+        <input type="button" value="退出游戏" onclick="javascript:history.back(-1);"/>
+    </div>
+
+</body>
+</html>

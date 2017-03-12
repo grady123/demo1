@@ -1,0 +1,238 @@
+body{
+    min-width: 320px;
+}
+header {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background: #ff841d;
+}
+nav{
+    width: 100%;
+    height: 36px;
+    overflow: hidden;
+    padding: 0 10px;
+    line-height: 36px;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear,0 0,0 100%,form(#fff),to(#ebebeb));
+    background: linear-gradient(to bottom,#ffffff,#ebebeb);
+    font-size: 14px;
+    border-bottom: 1px solid #cccccc;
+    border-top: 2px solid #ebebeb;
+}
+
+
+.logo_left {
+    width: 185px;
+    height: 25px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    background: url("../images/header_logo.png");
+    background-size: 185px 25px;
+}
+.logo-con {
+    width: 100%;
+}
+.logo_right {
+    width: 34px;
+    height: 34px;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    background: url("../images/header_app.png");
+    background-size: 34px 34px;
+}
+#Bproduct-bijia{
+    width: 100%;
+}
+#product-bijia .product-bijia{
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+#product-bijia .product-bijia >div{
+    font-weight: 400;
+    width: 100%;
+    font-size: 16px;
+    /*height: 30px;*/
+    line-height: 25px;
+    margin-top: 10px;
+}
+#product-bijia .product-bijia span{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #96D900;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    bottom: 15px;
+    right: 25px;
+}
+#product-bijia .tabs{
+    width: 100%;
+    border-top: 1px solid #CF6B10;
+    border-bottom: 1px solid #CF6B10;
+}
+#product-bijia .tabs li{
+    float: left;
+    width: 33.333333%;
+    text-align: center;
+    background-color: #fb0;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffd050),to(#fb0));
+    color: #ffffff;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+}
+#product-bijia .tabs li:nth-of-type(-n+2){
+    border-right: 1px solid #CF6B10;
+}
+#product-bijia .tabs li:first-of-type{
+    background-color: #fb0;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffa632),to(#ff9000));
+}
+#product-bijia .plist a{
+    height: 35px;
+    line-height: 35px;
+}
+#product-bijia .plist a table{
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+}
+#product-bijia .plist a table td:nth-of-type(2){
+    text-align: left;
+}
+#product-bijia .plist>.note{
+    border-top: 1px solid #bbb;
+    line-height: 35px;
+    color: #bbbbbb;
+    padding-left: 5px;
+}
+#product-bijia .product-com-title{
+    border-top: 3px solid #717171;
+    background-color: #DBDBDB;
+    text-align: center;
+    font-size: 16px;
+    line-height: 35px;
+}
+#product-bijia .product-com-list li{
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 10px 0;
+}
+#product-bijia .product-com-list li div{
+    color: #666666;
+    line-height: 20px;
+}
+#product-bijia .product-com-list li p{
+    color: #000;
+    line-height: 20px;
+    font-family: arial;
+}
+#product-bijia .product-com-list .more{
+    padding: 20px 10px 0;
+}
+#product-bijia .product-com-list .more a{
+    display: block;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border-bottom: 1px solid #bababa;
+    box-shadow: 0 0 1px #666;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#f1f1f1),to(#d4d4d4));
+    font-family: arial;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+    color: #000;
+}
+.foot{
+    margin-top: 20px;
+}
+.foot_con{
+    width: 100%;
+}
+.foot_con ul {
+    width: 100%;
+}
+.foot_con ul li {
+    float: left;
+    width: 33%;
+    height: 35px;
+    line-height: 35px;
+    text-align:center;
+    border-top:1px solid #cccccc;
+    border-bottom:1px solid #cccccc ;
+    list-style: none;
+}
+.foot_con ul li:nth-of-type(2){
+    border-right: 1px solid #cccccc ;
+    border-left: 1px solid #cccccc ;
+}
+.foot_con ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.foot_b{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+.foot_b a:first-of-type{
+    color: #e92322;
+}
+.foot_b a:nth-of-type(3){
+    color: #cccccc;
+}
+/*公共样式回到主页*/
+.fixedNav {
+    z-index: 999;
+    bottom: 150px;
+    right: 0;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: url("../images/coudanhome.svg");
+}
+.fixedNav .menu {
+    display: none;
+    border: 4px solid #d3d3d3;
+    border-radius: 14px;
+    background: #f2f2f2;
+    position: fixed;
+    min-width: 60%;
+    width: 60%;
+    top: 0;
+    left: 50px;
+}
+.fixedNav .menu ul {
+    padding-bottom: 15px;
+}
+.fixedNav .menu ul li {
+    display: block;
+    text-align: center;
+    float: left;
+    width: 25%;
+}
+.fixedNav .menu ul li a {
+    font-size: 14px;
+    display: block;
+    color: #000;
+}
+.fixedNav .menu ul li a img {
+    display: block;
+    width: 100%;
+    padding: 15px 15px 8px 15px;
+}
+.fixedNav .menu ul li a p {
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}

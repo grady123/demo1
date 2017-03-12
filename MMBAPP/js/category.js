@@ -1,0 +1,138 @@
+/**
+ * Created by 39739 on 2016/11/5.
+ */
+$(function () {
+    var getData=function (url,data,callback) {
+        $.ajax({
+            url:url,
+            data:data,
+            success:function (result) {
+                callback&&callback(result)
+            }
+        });
+    }
+    getData('http://mmb.ittun.com/api/getcategorytitle',{},function (result) {
+        var titleHtml=template('categoryTitle',result);
+        $("#category>ul").html(titleHtml);
+        $("#category .title>li").each(function (index,value) {
+            //itcast.tap(value.querySelector('a'),function () {
+            //    if(value.querySelector('ul').innerHTML=='') {
+            //        $("#category .title>li>ul").html('');
+                    getData('http://mmb.ittun.com/api/getcategory', {'titleid': value.querySelector('input').dataset['titleId']},function (result) {
+                        var productHtml = template('categoryProduct', result);
+                        $(value).children('article').append(productHtml);
+                    });
+                    if(index==0){
+                        $(value).children('input').attr({ 'checked':"checked"});
+                    }
+                //}else{
+                //    $("#category .title>li>ul").html('');
+                //}
+            //})
+        })
+    })
+    $(function () {
+        var windowWidth= $(window).width();
+        $.ajax({
+            url:"http://mmb.ittun.com/api/getindexmenu",
+            success: function (data) {
+                $(".fixedNav .menu ul").html(template("coudanIndex",data));
+            }
+        });
+        $.fn.YFLtap = function (callback) {
+            var _this = $(this);
+            var isMoved = false;
+            var startTime = 0;
+            var callback = typeof callback == "function" ? callback : function () {
+            };
+            _this.on("touchstart", function (e) {
+                startTime = e.timeStamp;
+            });
+            _this.on("touchmove", function () {
+                isMoved = true;
+            });
+            _this.on("touchend", function (e) {
+                if (!isMoved && e.timeStamp - startTime <= 150) {
+                    callback(e);
+                }
+                isMoved = false;
+            });
+        }
+        fixedNav();
+
+        function fixedNav() {
+            var fixedNav=$(".fixedNav");
+            var menu=$(".fixedNav .menu");
+            var isShow=false;
+            var startX=0;
+            var startY=0;
+            var currentX=parseInt(fixedNav.css("left"));
+            var currentY=parseInt(fixedNav.css("top"));
+            var right= windowWidth-fixedNav.width();
+            var left=0;
+            var endX=0;
+            var endY=0;
+
+            var width= Math.ceil(windowWidth*0.6+8);
+            var height=width/1.0276;
+
+            fixedNav.YFLtap(function () {
+                var menuX=0;
+                var menuY=0;
+
+                if(!isShow){
+                    if(currentX==left){
+                        menu.css("left",left+50);
+                    }else{
+                        menu.css("left",right-10-width);
+                    }
+                    menuY=currentY+50;
+                    if(currentY+40+height> $(window).height()){
+                        menuY=$(window).height()-height;
+                    }
+                    menu.css("top",menuY);
+                    menu.fadeIn(150);
+                    isShow=true;
+                }else{
+                    menu.fadeOut(150);
+                    isShow=false;
+                }
+            });
+            fixedNav.on("touchstart", function (e) {
+                startX=e.originalEvent.touches[0].clientX;
+                startY=e.originalEvent.touches[0].clientY;
+                endX=startX;
+                endY=startY;
+                $(window).on("touchmove",preventDefault);
+            });
+            fixedNav.on("touchmove", function (e) {
+                $(this).css("transition","none");
+                endX=e.originalEvent.touches[0].clientX;
+                endY=e.originalEvent.touches[0].clientY;
+                $(this).css({
+                    left:currentX+endX-startX,
+                    top:currentY+endY-startY
+                });
+            });
+            fixedNav.on("touchend", function () {
+                currentX+=endX-startX;
+                currentY+=endY-startY;
+                $(this).css("transition","all .3s");
+                if(currentX< $(window).width()/2){
+                    currentX=left;
+                    $(this).css("left",currentX);
+                }else{
+                    currentX=right;
+                    $(this).css("left",currentX);
+                }
+                $(window).off("touchmove",preventDefault);
+            });
+
+        }
+
+        function preventDefault(e) {
+            e.preventDefault();
+        }
+
+    });
+})

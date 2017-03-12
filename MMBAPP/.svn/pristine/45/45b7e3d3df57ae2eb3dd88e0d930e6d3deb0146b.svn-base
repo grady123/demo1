@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 200px;
+            background: #ccc;
+        }
+
+        .header-bar {
+            height: 44px;
+            background-color: #ff8b00;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0px 2px 3px #dddddd;
+        }
+        .header-bar.border-bottom-img {
+            border-bottom: 1px solid #dadada;
+            border-width: 0 0 1px 0;
+        }
+        .header-bar .inner {
+            padding: 0 8px;
+        }
+        .header-bar .inner .left {
+            position: absolute;
+            left: 8px;
+            bottom: 0px;
+            height: 44px;
+            width: 44px;
+            line-height: 44px;
+            color: #FFFFFF;
+        }
+        .header-bar .inner .left .icon-back {
+            box-sizing: border-box;
+            background: url("images/leftArrow.svg") no-repeat;
+            width: 44px;
+            height: 44px;
+            background-position: center center;
+            display: block;
+            padding: 10px;
+            background-origin: content-box;
+            background-clip: content-box;
+        }
+        .header-bar .center {
+            text-align: center;
+        }
+        .header-bar .center h1 {
+            font-size: 19px;
+            line-height: 44px;
+            color: #ffffff;
+            margin: 0px;
+            padding: 0px;
+            font-weight: normal;
+            padding: 0px 62px;
+        }
+        .header-bar .right {
+            position: absolute;
+            right: 8px;
+            bottom: 0px;
+            height: 44px;
+            width: 44px;
+            line-height: 44px;
+            color: #FFFFFF;
+            text-align: right;
+        }
+        .border-bottom-img {
+            border-bottom: 1px solid #dadada;
+            border-width: 0 0 1px 0;
+        }
+
+        .backToTop{
+            /*display: none;*/
+            right:10px;
+            bottom: 14px;
+            position: fixed;
+            padding: 8px;
+            box-sizing: content-box;
+            height: 32px;
+            width: 32px;
+            background-image: url("images/backToTop.svg");
+            background-repeat: no-repeat;
+            background-origin: content-box;
+            border: 2px solid #bbb;
+            border-radius: 50%;
+            opacity: .85;
+            background-color: #fff
+        }
+    </style>
+</head>
+<body>
+<!--通用头部-->
+<div class="header-bar border-bottom-img">
+    <div class="inner">
+        <div class="left"> <a href="index.html" class="icon-back"></a> </div>
+        <div class="center">
+            <h1>凑单品</h1>
+        </div>
+        <div class="right"> </div>
+    </div>
+</div>
+
+<!--返回顶部按钮的背景用到的矢量图已经在images文件夹里,可能需要改一下路径-->
+<div class="backToTop"></div>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script>
+    //监听页面滚动事件,大于一个屏幕的宽度时显示"返回顶部"按钮
+    $(window).on("scroll", function () {
+        if($(this).scrollTop()>=$(window).height()){
+            $(".backToTop").show();
+        }else{
+            $(".backToTop").hide();
+        }
+    });
+
+    //backToTop单击事件执行的代码,可以返回顶部
+        $(window).scrollTop(0);
+    //backToTop单击事件执行的代码,可以返回顶部
+
+    //按住时变色
+    $(".backToTop").on("touchstart", function () {
+        $(this).css("background-color","#E0E0E0");
+    });
+    $(".backToTop").on("touchend", function () {
+        $(this).css("background-color","#fff");
+    });
+</script>
+</html>

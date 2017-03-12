@@ -1,0 +1,294 @@
+/*自定义图标*/
+
+@font-face {font-family: "iconfont";
+    src: url('../fonts/font_dnbgg77ie4u9dx6r/iconfont.eot'); /* IE9*/
+    src: url('../fonts/font_dnbgg77ie4u9dx6r/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/font_dnbgg77ie4u9dx6r/iconfont.woff') format('woff'), /* chrome, firefox */
+    url('../fonts/font_dnbgg77ie4u9dx6r/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../fonts/font_dnbgg77ie4u9dx6r/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pinglun:before { content: "\e621"; }
+
+
+.layout{
+    max-width: 640px;
+    min-width: 320px;
+    margin:0 auto;
+}
+.choose{
+    width:100%;
+    height:30px;
+    background-color:#F5F5F5;
+    border-radius:5px;
+    margin-top:5px;
+}
+.choose li{
+    float:left;
+    width:30%;
+    text-align:center;
+    line-height:30px;
+    padding:0 5px;
+}
+.layout .main>ul{
+    width: 100%;
+    /*box-sizing: border-box;*/
+}
+.layout .main>ul>li{
+    width: 100%;
+    padding: 14px 8px;
+    border-bottom: 1px solid #eeeeee;
+}
+.layout .main>ul>li>a{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.layout .main>ul>li>a>.m_left{
+    width: 110px;
+    height: 100%;
+    float: left;
+    padding-left: 20px;
+}
+.layout .main>ul>li>a>.m_left>img{
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+.layout .main>ul>li>a>.m_right{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    padding-left: 150px;
+
+}
+.layout .main ul>li>a>.m_right>p:first-of-type{
+    width: 100%;
+    line-height: 30px;
+    padding-bottom: 30px;
+}
+.layout .main>ul>li>a>.m_right>p:first-of-type>span{
+    color: #ff6c00;
+}
+.layout>.main>ul>li>a>.m_right>p:last-of-type{
+    width: 100%;
+    line-height: 30px;
+}
+.layout .main>ul>li>a>.m_right .pinglun{
+    display:block;
+    float: right;
+    padding-right: 20px;
+    /*text-align: right;*/
+}
+
+.fixedNav {
+    bottom: 150px;
+    right: 0px;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: url("../images/coudanhome.svg");
+}
+.fixedNav .menu {
+    display: none;
+    border: 4px solid #d3d3d3;
+    border-radius: 14px;
+    background: #f2f2f2;
+    position: fixed;
+    min-width: 60%;
+    width: 60%;
+    top: 0;
+    left: 50px;
+}
+.fixedNav .menu ul {
+    padding-bottom: 15px;
+}
+.fixedNav .menu ul li {
+    display: block;
+    text-align: center;
+    float: left;
+    width: 25%;
+}
+.fixedNav .menu ul li a {
+    font-size: 14px;
+    display: block;
+    color: #000;
+}
+.fixedNav .menu ul li a img {
+    display: block;
+    width: 100%;
+    padding: 15px 15px 8px 15px;
+}
+.fixedNav .menu ul li a p {
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+
+/* 样式二 */
+.layout .list>ul{
+    width: 100%;
+    /*box-sizing: border-box;*/
+}
+.layout .list>ul>li{
+    width: 50%;
+    padding: 14px 8px;
+    border-bottom: 1px solid #eeeeee;
+    float: left;
+}
+.layout .list>ul>li:nth-of-type(even){
+    border-left: 1px solid #eeeeee;
+}
+.layout .list>ul>li>a{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.layout .list>ul>li>a>.m_left{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+.layout .list>ul>li>a>.m_left>img{
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+
+.layout .list>ul>li>a>.m_right{
+
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 30px;
+}
+.layout .list ul>li>a>.m_right>p:first-of-type{
+    width: 100%;
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
+    margin-top: 10px;
+
+}
+.layout .list>ul>li>a>.m_right>p:first-of-type>span{
+    color: #ff6c00;
+}
+.layout>.list>ul>li>a>.m_right>p:last-of-type{
+    width: 100%;
+    line-height: 30px;
+}
+.layout .list>ul>li>a>.m_right .pinglun{
+    display:block;
+    float: right;
+    padding-right: 20px;
+    /*text-align: right;*/
+}
+
+/* 样式三 */
+.layout .pc>ul{
+    width: 100%;
+    /*box-sizing: border-box;*/
+}
+.layout .pc>ul>li{
+    width: 100%;
+    padding: 14px 8px;
+    border-bottom: 1px solid #eeeeee;
+}
+.layout .pc>ul>li>a{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.layout .pc>ul>li>a>.m_left{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+
+}
+.layout .pc>ul>li>a>.m_left>img{
+    display: block;
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+}
+
+.layout .pc>ul>li>a>.m_right{
+
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 30px;
+}
+.layout .pc ul>li>a>.m_right>p:first-of-type{
+    width: 100%;
+    line-height: 20px;
+    height: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+
+}
+.layout .pc>ul>li>a>.m_right>p:first-of-type>span{
+    color: #ff6c00;
+}
+.layout>.pc>ul>li>a>.m_right>p:last-of-type{
+    width: 100%;
+    line-height: 30px;
+    padding-right: 40px;
+}
+.layout .pc>ul>li>a>.m_right .pinglun{
+    display:block;
+    float: right;
+    padding-right: 20px;
+    /*text-align: right;*/
+}
+
+
+
+
+.page{
+    width: 100%;
+    padding: 15px 0px;
+}
+.page>.prev,.page>.last,.page>.section{
+    display:block;
+    width: 33.33%;
+    text-align: center;
+    float: left;
+
+}
+.page>.prev>a,.page>.last>a{
+    display:inline-block;
+    width: 80px;
+    height: 32px;
+    background-color: #d4d4d4;
+    border: 1px solid #bababa;
+    box-shadow: 0 0 1px #666;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 32px;
+
+}
+.page>.section>select{
+    display: inline-block;
+    width: 80px;
+    height: 32px;
+}
+
+
+
+
+

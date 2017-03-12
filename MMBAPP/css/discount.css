@@ -1,0 +1,77 @@
+
+.layout{
+	min-width:320px;
+	max-width: 640px;
+	margin: 0 auto; 
+	background-color: #fff!important;
+}
+.layout .main{
+	width: 100%;
+}
+.layout .main li{
+	width: 50%;
+	float: left;
+	padding: 15px 0 0 15px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #eeeeee;
+	border-top-width: 0;
+	overflow: hidden;
+}
+.layout .main li:nth-of-type(even){
+	border-left-width: 0; 
+}
+.layout .main li .img{
+	width: 140px;
+	height: 140px;
+	margin: 10px auto;
+    overflow: hidden;
+}
+.layout .main li .img img{
+	display: block;
+	vertical-align: middle;
+	width: 100%;
+}
+.layout .main li .name{
+    color: #333333;
+    font-size: 14px;
+    text-align: left;
+    line-height: 18px;
+    height: 36px;
+    overflow: hidden;
+}
+.layout .main li .price{
+	color: #ff6c00;
+    margin: 5px 0 5px 0;
+    font-size: 14px;
+    text-align: left;
+    overflow: hidden;
+    height: 18px;
+    line-height: 18px;
+}
+.layout .main li .source{
+    color: #a1a1a1;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.layout .jiazai{
+	margin-top: 15px;
+	height: 20px;
+	width: 100%;
+	background-color: #eee;
+	text-align: center;
+}
+.layout .jiazai span{
+	height: 17px;
+	width: 17px;
+	animation: rotate 3s;
+}
+	@keyframes rotate {
+            from{
+
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }

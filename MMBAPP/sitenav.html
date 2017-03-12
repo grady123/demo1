@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>商城导航</title>
+    <script src="js/template-native.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="js/base.js"></script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/sitenav.css"/>
+    <link rel="shortcut icon" href="manmanmai.ico"/>
+    <style>
+        .fixedNav {
+            z-index: 999;
+            bottom: 150px;
+            right: 0;
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            background: url("images/coudanhome.svg");
+        }
+        .fixedNav .menu {
+            display: none;
+            border: 4px solid #d3d3d3;
+            border-radius: 14px;
+            background: #f2f2f2;
+            position: fixed;
+            min-width: 60%;
+            width: 60%;
+            top: 0;
+            left: 50px;
+        }
+        .fixedNav .menu ul {
+            padding-bottom: 15px;
+        }
+        .fixedNav .menu ul li {
+            display: block;
+            text-align: center;
+            float: left;
+            width: 25%;
+        }
+        .fixedNav .menu ul li a {
+            font-size: 14px;
+            display: block;
+            color: #000;
+        }
+        .fixedNav .menu ul li a img {
+            display: block;
+            width: 100%;
+            padding: 15px 15px 8px 15px;
+        }
+        .fixedNav .menu ul li a p {
+            height: 20px;
+            line-height: 20px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <!-- 小组件-->
+        <div class="fixedNav">
+            <div class="menu">
+                <script type="text/template" id="coudanIndex">
+                    <% for(var i=0;i< result.length;i++){ %>
+                    <li>
+                        <a href="<%=i==7?'javascript:void(0)':result[i].titlehref%>">
+                            <%=#result[i].img%>
+                            <p><%=result[i].name%></p>
+                        </a>
+                    </li>
+                    <% } %>
+                </script>
+                <ul class="clearFix">
+
+                </ul>
+            </div>
+        </div>
+    <!--header-->
+        <header class="header" id="header">
+            <a href="index.html" class="header_l iconfont icon-fanhui"></a>
+            <a href="http://m.manmanbuy.com/?o=download" class="header_r"></a>
+            <h3 class="header_con">商城导航</h3>
+        </header>
+    <!--内容-->
+    <main class="site-nav clearFix">
+        <ul></ul>
+    </main>
+
+
+    <!--底部-->
+    <div class="foot">
+        <!--底部首页nav-->
+            <div class="foot_nav">
+                <div>
+                    <a href="index.html">首页</a>
+                    <span>&gt;</span>
+                    <span>商品导航</span>
+                </div>
+            </div>
+            <div class="foot_con clearFix">
+                <ul>
+                    <li><a href="index_denglu.html">登录</a></li>
+                    <li><a href="index_zhuce.html">注册</a></li>
+                    <li><a href="#">返回顶部</a></li>
+                </ul>
+            </div>
+            <div class="foot_b">
+                <a href="javascript:void(0)">手机APP下载</a>
+                <a href="javascript:void(0)">慢慢买手机版</a>
+                <a href="javascript:void(0)">-- 掌上比价平台</a>
+                <p>m.manmanbuy.com </p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--模板-->
+<script type="text/template" id="siteCon">
+    <% for (var i = 0; i < items.length; i++) { %>
+    <li>
+        <a href="<%=items[i].navHref%>">
+            <img src="<%=items[i].navImg%>" alt=""/>
+            <p><%=items[i].navTitle%></p>
+        </a>
+    </li>
+    <% } %>
+</script>
+<script>
+    $.ajax({
+        type:"get",
+        url:"http://192.168.37.76:9090/api/getsitenav",
+        data:{},
+        success: function (data) {
+            var html = template("siteCon",{"items":data["result"]});
+            $(".site-nav ul").html(html);
+        }
+    })
+</script>
+
+</body>
+<script>
+    $(function () {
+        $.ajax({
+            url:"http://192.168.37.76:9090/api/getindexmenu",
+            success: function (data) {
+                $(".fixedNav .menu ul").html(template("coudanIndex",data));
+            }
+        });
+        $.fn.YFLtap = function (callback) {
+            var _this = $(this);
+            var isMoved = false;
+            var startTime = 0;
+            var callback = typeof callback == "function" ? callback : function () {
+            };
+            _this.on("touchstart", function (e) {
+                startTime = e.timeStamp;
+            });
+            _this.on("touchmove", function () {
+                isMoved = true;
+            });
+            _this.on("touchend", function (e) {
+                if (!isMoved && e.timeStamp - startTime <= 150) {
+                    callback(e);
+                }
+                isMoved = false;
+            });
+        }
+        fixedNav();
+
+        function fixedNav() {
+            var windowWidth= $(window).width();
+            var fixedNav=$(".fixedNav");
+            var menu=$(".fixedNav .menu");
+            var isShow=false;
+            var startX=0;
+            var startY=0;
+            var currentX=parseInt(fixedNav.css("left"));
+            var currentY=parseInt(fixedNav.css("top"));
+            var right= windowWidth-fixedNav.width();
+            var left=0;
+            var endX=0;
+            var endY=0;
+
+            var width= Math.ceil(windowWidth*0.6+8);
+            var height=width/1.0276;
+
+            fixedNav.YFLtap(function () {
+                var menuX=0;
+                var menuY=0;
+
+                if(!isShow){
+                    if(currentX==left){
+                        menu.css("left",left+50);
+                    }else{
+                        menu.css("left",right-10-width);
+                    }
+                    menuY=currentY+50;
+                    if(currentY+40+height> $(window).height()){
+                        menuY=$(window).height()-height;
+                    }
+                    menu.css("top",menuY);
+                    menu.fadeIn(150);
+                    isShow=true;
+                }else{
+                    menu.fadeOut(150);
+                    isShow=false;
+                }
+            });
+            fixedNav.on("touchstart", function (e) {
+                startX=e.originalEvent.touches[0].clientX;
+                startY=e.originalEvent.touches[0].clientY;
+                endX=startX;
+                endY=startY;
+                $(window).on("touchmove",preventDefault);
+            });
+            fixedNav.on("touchmove", function (e) {
+                $(this).css("transition","none");
+                endX=e.originalEvent.touches[0].clientX;
+                endY=e.originalEvent.touches[0].clientY;
+                $(this).css({
+                    left:currentX+endX-startX,
+                    top:currentY+endY-startY
+                });
+            });
+            fixedNav.on("touchend", function () {
+                currentX+=endX-startX;
+                currentY+=endY-startY;
+                $(this).css("transition","all .3s");
+                if(currentX< $(window).width()/2){
+                    currentX=left;
+                    $(this).css("left",currentX);
+                }else{
+                    currentX=right;
+                    $(this).css("left",currentX);
+                }
+                $(window).off("touchmove",preventDefault);
+            });
+
+        }
+
+        function preventDefault(e) {
+            e.preventDefault();
+        }
+
+    });
+</script>
+</html>

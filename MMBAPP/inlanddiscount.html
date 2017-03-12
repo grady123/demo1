@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>慢慢买比价网--手机版-国内折扣</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <!--<link rel="stylesheet" href="css/discount.css">-->
+    <link rel="stylesheet" href="css/discountheader.css">
+    <link rel="stylesheet" href="css/inlanddiscount.css"/>
+    <!-- <script src="js/less.min.js"></script> -->
+</head>
+<body>
+<script type="text/template" id="zhekou">
+    <% for (var i=0;i< items.length;i++){%>
+    <li>
+        <a href="discountproduct.html?productid=<%=items[i].productId%>">
+            <div class="img"><%=#items[i].productImg%></div>
+                <div class="name">
+                    <span><%= items[i].productName%></span>
+                </div>
+                <div class="price">
+                    <span><%= items[i].productPrice%></span>
+                </div>
+                <p class="source">
+                    <span><%= items[i].productFrom %>|</span>
+                    <span><%=items[i].productTime%></span>
+                </p>
+            </div>
+        </a>
+    </li>
+    <% }%>
+</script>
+    <div class="layout">
+
+    <header>
+        <div class="back">
+            <a href="index.html" class="icon-fanhui iconfont"></a>
+        </div>
+
+        <h1>国内折扣</h1>
+        <div class="app">
+            
+        </div>
+    </header>
+        <div class="choose">
+            <ul>
+                <li><a href="index.html">首页</a>&nbsp;><a href="inlanddiscount.html">国内折扣</a></li>
+                <li class="tab icon-qiehuan iconfont"></li>
+                <li><a href="index.html"><span class="icon-shouye iconfont"></span></a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <ul class="product clearFix">
+            
+            </ul>
+        </div>
+        <p class="jiazai"><span class="iconfont icon-jiazai"></span></p>
+        <div class="foot">   
+        <div class="foot_con clearFix">
+            <ul>
+                <li><a href="index_denglu.html">登录</a></li>
+                <li><a href="index_zhuce.html">注册</a></li>
+                <li><a href="#">返回顶部</a></li>
+            </ul>
+        </div>
+         <div class="foot_b">
+             <a href="javascript:void(0)">手机APP下载</a>
+             <a href="javascript:void(0)">慢慢买手机版</a>
+             <a href="javascript:void(0)">-- 掌上比价平台</a>
+             <p>m.manmanbuy.com </p>
+         </div>
+    </div>
+
+    </div>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="js/template-native.js"></script>
+    <script src="js/discount.js"></script>
+</body>
+</html>

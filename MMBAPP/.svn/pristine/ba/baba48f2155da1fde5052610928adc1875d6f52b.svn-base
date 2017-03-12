@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="manmanmai.ico"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/bijia.css"/>
+    <title>bijia</title>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="js/swipe.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/template-native.js"></script>
+    <script src="js/bijia.js"></script>
+</head>
+<body>
+<script type="text/template" id="productBijia">
+    <div><%=result[0].productName%></div>
+    <%=#result[0].productImg%>
+    <span>收藏</span>
+</script>
+<script type="test/template" id="bjShop">
+    <%=#result[0].bjShop%>
+</script>
+<script type="text/template" id="getproductcom">
+    <%for(var i=0;i< result.length;i++){%>
+        <li>
+            <div class="clearFix">
+                <span class="f_left"><%=result[i].comName%></span>
+                <span class="f_right"><%=result[i].comTime%></span>
+            </div>
+            <div class="clearFix">
+                <span class="f_right"><%=result[i].comFrom%></span>
+            </div>
+            <p><%=result[i].comContent%></p>
+        </li>
+    <%}%>
+</script>
+<script type="text/template" id="productNav">
+    <a href="productList.html?categoryid=<%=result[0].categoryId%>&pageid=1"><%=result[0].category%></a>&gt;
+</script>
+<script type="text/template" id="productName">
+    <span><%=result[0].productName%><span>
+</script>
+<header>
+    <a href="index.html"><div class="logo_left"></div></a>
+    <div class="logo_con"></div>
+    <a href="#"><div class="logo_right"></div></a>
+</header>
+<nav class="product">
+    <a href="index.html">首页</a>&gt;
+</nav>
+<div id="product-bijia" style="max-width: 640px ;margin: 0 auto">
+
+    <div class="product-bijia" >
+
+    </div>
+    <div class="tabs">
+        <ul class="clearFix">
+            <li>比价购买</li>
+            <li>产品参数</li>
+            <li>评价（2322）</li>
+        </ul>
+    </div>
+    <div class="plist">
+        <a href="#">
+
+        </a>
+        <div class="note">* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+    </div>
+    <div class="product-com-title">
+        <div>网友评价</div>
+    </div>
+    <div class="product-com-list">
+        <ul>
+            <!--<li></li>-->
+        </ul>
+        <div class="more">
+            <a href="#">查看更多评价</a>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <div class="foot_con clearFix">
+        <ul>
+            <li><a href="index_denglu.html">登录</a></li>
+            <li><a href="index_zhuce.html">注册</a></li>
+            <li><a href="#">返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="foot_b">
+        <a href="javascript:void(0)">手机APP下载</a>
+        <a href="javascript:void(0)">慢慢买手机版</a>
+        <a href="javascript:void(0)">-- 掌上比价平台</a>
+        <p>m.manmanbuy.com </p>
+    </div>
+</div>
+<nav id="ad">
+    <input type="button" value="×" class="close">
+    <span>慢</span>
+    <div>
+        <p>慢慢买</p>
+        <p>全网比价,省钱专家</p>
+    </div>
+    <a href="#">立即打开</a>
+</nav>
+<div class="fixedNav">
+    <div class="menu">
+        <script type="text/template" id="coudanIndex">
+            <% for(var i=0;i< result.length;i++){ %>
+            <li>
+                <a href="<%=i==7?'javascript:void(0)':result[i].titlehref%>">
+                    <%=#result[i].img%>
+                    <p><%=result[i].name%></p>
+                </a>
+            </li>
+            <% } %>
+        </script>
+        <ul class="clearFix">
+
+        </ul>
+    </div>
+</div>
+</body>
+</html>

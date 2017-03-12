@@ -1,0 +1,145 @@
+.layout {
+    width: 100%;
+
+    max-width: 640px;
+    min-width: 320px;
+    background-color:white;
+    margin: 0 auto;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background: #ff841d;
+}
+
+.logo_left {
+    width: 185px;
+    height: 25px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    background: url("../images/header_logo.png");
+    background-size: 185px 25px;
+}
+.logo-con {
+    width: 100%;
+}
+.logo_right {
+    width: 34px;
+    height: 34px;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    background: url("../images/header_app.png");
+    background-size: 34px 34px;
+}
+/*search*/
+.search{
+    height: 50px;
+    padding: 10px;
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    border-bottom: 1px solid #cccccc;
+}
+.search_con{
+    width: 100%;
+    height: 100%;
+    padding-right: 80px;
+    position: relative;
+
+}
+.search_con input:first-of-type{
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    padding-left: 20px;
+    background-color:#f1f1f1;
+    border:none;
+}
+.search_con input:last-of-type{
+    position: absolute;
+    width: 73px;
+    height: 30px;
+    background: #ff841d;
+    border-radius: 20px;
+    color: #fff;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    border:none;
+}
+.yz{
+    width: 100%;
+    padding:10px 12px;
+
+}
+form{
+    width: 100%;
+}
+input{
+    display: block;
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+
+}
+input:nth-of-type(3){
+    background-color:#ff841d;
+    border-radius: 5px;
+}
+input:last-of-type{
+    margin-top:3px;
+    width: 10px;
+    height: 11px;
+    float: left;
+}
+.mima{
+    margin: 45px 0;
+}
+/*foot*/
+.foot{
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+.foot_con{
+    width: 100%;
+}
+.foot_con ul {
+    width: 100%;
+}
+.foot_con ul li {
+    float: left;
+    width: 33%;
+    height: 35px;
+    line-height: 35px;
+    text-align:center;
+    border-top:1px solid #cccccc;
+    border-bottom:1px solid #cccccc ;
+    list-style: none;
+}
+.foot_con ul li:nth-of-type(2){
+    border-right: 1px solid #cccccc ;
+    border-left: 1px solid #cccccc ;
+}
+.foot_con ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.foot_b{
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+.foot_b a:first-of-type{
+    color: #e92322;
+}
+.foot_b a:nth-of-type(3){
+    color: #cccccc;
+}

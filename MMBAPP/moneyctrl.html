@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>慢慢买比价网--手机版-省钱控</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/moneyctrl.css"/>
+    <link rel="stylesheet" href="css/discountheader.css"/>
+    <link rel="shortcut icon" href="manmanmai.ico"/>
+
+</head>
+<body>
+
+<script type="text/template" id="money">
+    <% for (var i=0;i< items.length;i++){%>
+    <li class="clearFix">
+        <a class="clearFix" href="moneyproduct.html?productid=<%=items[i].productId%>">
+            <div class="m_left"><%=#items[i].productImgSm%></div>
+            <div class="m_right clearFix">
+                <p>
+                    <span class=""><%= items[i].productPinkage %></span>
+                </p>
+                <p>
+                    <span class=""><%= items[i].productFrom %> |<%= items[i].productTime %></span>
+                    <span class="pinglun"><i class="iconfont icon-pinglun"></i><%= items[i].productComCount.replace("有","").replace("人评论","") %></span>
+                </p>
+            </div>
+        </a>
+    </li>
+    <% }%>
+</script>
+<div class="layout">
+    <header>
+        <div class="back">
+            <a href="index.html" class="icon-fanhui iconfont"></a>
+        </div>
+        <h1>省钱控-最新优惠</h1>
+
+        <div class="app">
+
+        </div>
+    </header>
+    <div class="choose">
+        <ul>
+            <li><a href="index.html">首页</a>&nbsp;><a href="moneyctrl.html">省钱控</a></li>
+            <li class="tab icon-qiehuan iconfont"></li>
+            <li><a href="index.html"><span class="icon-shouye iconfont"></span></a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <ul class="clearFix moneyCon">
+        </ul>
+    </div>
+    <!--<div class="backToTop"></div>-->
+    <div class="fixedNav">
+        <div class="menu">
+            <script type="text/template" id="coudanIndex">
+                <% for(var i=0;i< result.length;i++){ %>
+                <li>
+                    <a href="<%=i==7?'javascript:void(0)':result[i].titlehref%>">
+                        <%=#result[i].img%>
+                        <p><%=result[i].name%></p>
+                    </a>
+                </li>
+                <% } %>
+            </script>
+            <ul class="clearFix">
+
+            </ul>
+        </div>
+    </div>
+    <div class="page clearFix">
+       <span class="prev"><a href="" >上一页</a></span>
+        <span class="section">
+             <select class="sel">
+             </select>
+        </span>
+        <span class="last"> <a href="">下一页</a></span>
+    </div>
+    <div class="foot">
+        <div class="foot_con clearFix">
+            <ul>
+                <li><a href="index_denglu.html">登录</a></li>
+                <li><a href="index_zhuce.html">注册</a></li>
+                <li><a href="#">返回顶部</a></li>
+            </ul>
+        </div>
+        <div class="foot_b">
+            <a href="javascript:void(0)">手机APP下载</a>
+            <a href="javascript:void(0)">慢慢买手机版</a>
+            <a href="javascript:void(0)">-- 掌上比价平台</a>
+
+            <p>m.manmanbuy.com </p>
+        </div>
+    </div>
+</div>
+
+<script src="lib/jquery/jquery.min.js"></script>
+
+<script src="js/template-native.js"></script>
+<script src="js/base.js"></script>
+<script src="js/moneyctrl.js"></script>
+<script src="js/coudanpin.js"></script>
+</body>
+</html>

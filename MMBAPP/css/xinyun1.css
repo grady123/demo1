@@ -1,0 +1,153 @@
+.xinyun {
+  width: 100% ;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.xinyun .xinyun2 {
+  position: relative;
+}
+.xinyun .xinyun2 img {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+}
+.xinyun .xinyun2 img:nth-of-type(2) {
+  width: 100%;
+  position: absolute;
+  top: -7.5%;
+  left: -2.5%;
+  transform-origin: center center;
+  transition: all 3s  ease;
+}
+.xinyun .xinyun2 img:nth-of-type(3) {
+  width: 100%;
+  position: absolute;
+  top: -3%;
+  left: 0px;
+}
+.xinyun .xinyun2 span {
+  position: absolute;
+  top: 70%;
+  left: 55%;
+  color: #f0e1e0;
+  font-size: 30px;
+  font-weight: 900;
+  width: 20px;
+  height: 20px;
+}
+.xinyun .xinyun3 {
+  width: 100%;
+  position: absolute;
+  top: -1%;
+  left: 0px;
+}
+.xinyun .xinyun3 img {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.xinyun .xinyun4 {
+  width: 100%;
+  position: absolute;
+  top: -3%;
+  left: 0px;
+}
+.xinyun .xinyun4 img {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.weibu {
+  margin-top: 0;
+}
+@keyframes cloclAnimation {
+  to {
+    transform: rotate(11600deg);
+  }
+}
+/*获得奖品*/
+.getMoney {
+  width: 100%;
+  z-index: 1200;
+  max-width: 540px;
+  min-width: 340px;
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.getMoney img {
+  width: 100%;
+  display: block;
+}
+.getMoney .text {
+  position: absolute;
+  z-index: 1201;
+  width: 68%;
+  height: 11%;
+  left: 16%;
+  bottom: 50%;
+}
+.getMoney .text span#money {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  color: transparent;
+  text-shadow: 0 0 4px #fffea5, 0 0 30px #ffe218, 0 0 70px #eee;
+}
+.publilcgo {
+  position: absolute;
+  z-index: 2000;
+  width: 95px;
+  top: 5%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #f8f8f8;
+  background-color: rgba(255, 123, 94, 0.5);
+  border-radius: 15px;
+}
+#backhome {
+  position: absolute;
+  z-index: 2000;
+  width: 95px;
+  top: 5%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #f8f8f8;
+  background-color: rgba(255, 123, 94, 0.5);
+  border-radius: 15px;
+  left: 10%;
+}
+#gobaicai {
+  position: absolute;
+  z-index: 2000;
+  width: 95px;
+  top: 5%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #f8f8f8;
+  background-color: rgba(255, 123, 94, 0.5);
+  border-radius: 15px;
+  right: 10%;
+}

@@ -1,0 +1,188 @@
+﻿/*添加公共样式*/
+
+/*重置*/
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    /*添加移动端特有的点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+    /*设置盒模型*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+input{
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+    /*清除不同浏览器添加给控件的样式*/
+    -webkit-appearance: none;
+}
+
+
+/*公共*/
+body{
+    font-size: 12px;
+    color: #333;
+    font-family: "microsoft YaHei",sans-serif;
+}
+a:hover,a{
+    color: #333;
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+.m_l10{
+    margin-left: 10px;
+}
+.m_r10{
+    margin-right:10px;
+}
+.m_t10{
+    margin-top:10px;
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+
+/*清除浮动*/
+.clearFix::before,
+.clearFix::after{
+    content: "";
+    height: 0px;
+    line-height:0px;
+    display: block;
+    clear: both;
+    /*提高渲染效果：设置不可见，系统不会进行渲染*/
+    visibility: hidden;
+}
+        /* 字体图标 */
+@font-face {
+    font-family: "iconfont";
+  src: url('../fonts/fonts/iconfont.eot'); /* IE9*/
+  src: url('../fonts/fonts/iconfont.js') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/fonts/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../fonts/fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/fonts/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+/*公共广告部分nav*/
+nav#ad{
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    height: 65px;
+    z-index: 999;
+    transition: all ease 4s ;
+}
+#ad input{
+    width: 21px;
+    height: 21px;
+    background-color: #bbbbbb;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+    float: left;
+    line-height: 20px;
+    position: absolute;
+    left: 12px;
+    bottom: 19px;
+    z-index: 900;
+
+}
+#ad span{
+    float: left;
+    width:42px;
+    height: 42px;
+    background: #FC5206;
+    color: #FFFFFF;
+    font-size:33px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    left: 42px;
+    bottom: 9px;
+}
+#ad a{
+    position: absolute;
+    bottom: 13px;
+    right: 10px;
+    width: 74px;
+    height: 33px;
+    background-color: #FF7700;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    line-height: 33px;
+    border-radius: 10px;
+}
+#ad div{
+    padding: 7px 84px 0 87px;
+    height: 100%;
+    width: 100%;
+    color: #888888;
+    position: relative;
+
+}
+#ad div p:first-of-type{
+    padding-left:10px;
+    position: absolute;
+    font-size:23px;
+}
+#ad div p:last-child{
+    padding-left: 10px;
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+}
+
+
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-fanhui:before { content: "\e600"; }
+
+.icon-msnui-menu-right:before { content: "\e658"; }
+
+.icon-ES-xiala:before { content: "\e61d"; }
+
+.icon-pinglun:before { content: "\e621"; }
+
+.icon-qiehuan:before { content: "\e619"; }
+
+.icon-jiazai:before { content: "\e61f"; }
+
+.icon-jiantouxiangshang:before { content: "\e643"; }
+
+.icon-pukai:before { content: "\e645"; }
+
+.icon-xing:before { content: "\e6e7"; }
+
+.icon-shouye:before { content: "\e64f"; }
+
+.icon-xiangshangjiantou:before { content: "\e65d"; }
+
+.icon-xiangxiajiantou:before { content: "\e65e"; }
+
+.icon-up_hei:before { content: "\e679"; }
+
+.icon-xiala:before { content: "\e62d"; }
+
+

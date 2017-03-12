@@ -1,0 +1,206 @@
+.layout {
+  position:relative;
+}
+  .choose{
+    width:100%;
+    height:30px;
+    background-color:#F5F5F5;
+    border-radius:5px;
+    margin-top:5px;
+    }
+    .choose li{
+      float:left;
+      width:30%;
+      text-align:center;
+      line-height:30px;
+      padding:0 5px;
+    }
+   
+  .main {
+    width: 100%;
+	}
+    .main ul li {
+      width: 50%;
+      float: left;
+      padding: 15px 0 0 15px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #eeeeee;
+      border-top-width: 0;
+      overflow: hidden;
+  }
+    .main ul li .name {
+        color: #333333;
+        font-size: 14px;
+        text-align: left;
+        line-height: 18px;
+        height: 36px;
+        overflow: hidden;
+      }
+     .main ul li .img {
+        width: 140px;
+        height: 140px;
+        margin: 10px auto;
+        overflow: hidden;
+       }
+      .main li .img  img {
+          display: block;
+          vertical-align: middle;
+          width: 100%;
+        }
+
+      .main li .price {
+        color: #ff6c00;
+        margin: 5px 0 5px 0;
+        font-size: 14px;
+        text-align: left;
+        overflow: hidden;
+        height: 18px;
+        line-height: 18px;
+      }
+      .main li .source {
+        color: #a1a1a1;
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+
+   
+    .main li:nth-of-type(even) {
+      border-left-width: 0;
+    }
+
+  .list{
+      width: 100%;
+  }
+  .list li{
+      width: 100%;
+      padding: 15px;
+      text-align: left;
+      vertical-align: middle;
+      border: 1px solid #eeeeee;
+      border-top-width: 0;
+      overflow: hidden;
+   }
+     .list li .name {
+        color: #333333;
+        font-size: 14px;
+        text-align: left;
+        line-height: 18px;
+        height: 36px;
+        overflow: hidden;
+        margin-top:25px;
+        margin-bottom:25px;
+      }
+       .list li .img{
+        width: 140px;
+        height: 140px;
+        margin: 10px;
+        margin-right:20px;
+        overflow: hidden;
+        float:left;
+    }
+     .list li .img img{
+          display: block;
+          vertical-align: middle;
+          width: 100%;
+        }
+
+    .list li .price {
+        color: #ff6c00;
+        margin: 5px 0 5px 0;
+        font-size: 14px;
+        text-align: left;
+        overflow: hidden;
+        height: 18px;
+        line-height: 18px;
+      }
+      .list li .source {
+        color: #a1a1a1;
+        font-size: 12px;
+        text-align: left;
+        margin-top:30px;
+        margin-bottom: 5px;
+      }
+   
+    .pc {
+    width: 100%;
+	}
+    .pc li {
+      width: 100%;
+      padding: 15px 0 0 15px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #eeeeee;
+      border-top-width: 0;
+      overflow: hidden;
+  }
+    .pc li  .name {
+        color: #333333;
+        font-size: 14px;
+        text-align: left;
+        line-height: 18px;
+        height: 36px;
+        overflow: hidden;
+        margin-left: 30px;
+        margin-right:30px;
+      }
+      .pc li  .name .img {
+        width: 300px;
+        height: 240px;
+        margin: 10px auto;
+        overflow: hidden;
+      }
+        .pc li  .name .img img {
+          display: block;
+          vertical-align: middle;
+          width: 100%;
+        }
+      .pc li .price {
+        color: #ff6c00;
+        margin: 5px 0 5px 0;
+        font-size: 14px;
+        text-align: left;
+        overflow: hidden;
+        height: 18px;
+        line-height: 18px;
+        margin-left: 30px;
+      }
+     .pc li .source {
+        color: #a1a1a1;
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 5px;
+        margin-left: 30px;
+      }
+  .jiazai {
+    margin-top: 15px;
+    height: 20px;
+    width: 100%;
+    background-color: #eee;
+    text-align: center;
+	}
+    .jiazai span{
+      display: inline-block;
+      height: 17px;
+      width: 17px;
+    }
+
+@keyframes rotate {
+  from {
+
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+

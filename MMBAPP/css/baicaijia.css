@@ -1,0 +1,544 @@
+em {
+  font-style: normal;
+}
+i {
+  font-style: normal;
+}
+b {
+  font-weight: 400;
+}
+.layout {
+  width: 100%;
+  min-width: 320px;
+  background-color: #eee;
+  overflow: hidden;
+}
+/*ͷ����ʼ*/
+.header_a {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 44px;
+}
+.header {
+  width: 100%;
+  height: 44px;
+  background-color: #F4483E;
+  position: relative;
+}
+.header a.header_l {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 44px;
+  left: 0;
+  font-family: consolas;
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  line-height: 40px;
+}
+.header a.header_r {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 44px;
+  right: 0;
+  background: url('../images/header_app.png') 1px 3px no-repeat;
+  background-size: 40px;
+}
+.header h3.header_con {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  font-weight: 400;
+}
+/*banner��ʼ*/
+.banner {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+.banner img {
+  width: 100%;
+  display: block;
+}
+/*nav��ʼ*/
+nav.nav {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+nav.nav .nav_l {
+  width: 100%;
+  height: 38px;
+  overflow: hidden;
+}
+nav.nav .nav_l ul {
+  transition: all .4s;
+  -webkit-transition: all .4s;
+}
+nav.nav .nav_l ul li {
+  float: left;
+}
+nav.nav .nav_l ul li a {
+  font-size: 14px;
+  display: block;
+  margin: 0 13px;
+  height: 38px;
+  line-height: 38px;
+}
+nav.nav .nav_l ul li.active a {
+  border-bottom: 2px solid #e92322;
+  color: #e92322;
+}
+nav.nav .nav_r {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  border-left: 1px solid #eee;
+  width: 38px;
+  height: 38px;
+  background: url("../images/icon_bar.png") no-repeat;
+  background-color: #f8f8f8;
+  background-position: -70px -133px;
+  background-size: 300px;
+}
+/*list��ʼ*/
+.list {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.list .list_con {
+  width: 100%;
+}
+.list .list_con > ul {
+  width: 100%;
+}
+.list .list_con > ul > li {
+  margin-top: 6px;
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  padding: 10px 5px;
+  position: relative;
+}
+.list .list_con > ul > li > a {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.list .list_con > ul > li > .pic {
+  background-color: pink;
+  width: 135px;
+  height: 130px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+}
+.list .list_con > ul > li > .pic > img {
+  width: 100%;
+  display: block;
+}
+.list .list_con > ul > li .list_right {
+  padding-left: 145px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(1) {
+  min-height: 28px;
+  max-height: 40px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(2) {
+  margin-top: 2px;
+  font-size: 24px;
+  color: #e92322;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(2) > i {
+  font-style: normal;
+  font-size: 16px;
+  color: red;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(2) > em {
+  font-style: normal;
+  margin-left: 5px;
+  font-size: 12px;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(2) > del {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #777;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(3) {
+  position: absolute;
+  bottom: 28px;
+  height: 25px;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(3) > i {
+  overflow: hidden;
+  width: 84px;
+  height: 12px;
+  border: 1px solid red;
+  background-color: #FFB7B7;
+  display: inline-block;
+  border-radius: 5px;
+  position: relative;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(3) > i > em {
+  position: absolute;
+  height: 12px;
+  left: 0;
+  top: 0;
+  background-color: orange;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(3) > i > span {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  margin-left: -12px;
+  height: 12px;
+  color: #fff;
+  line-height: 10px;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(3) > b {
+  font-weight: 400;
+  margin-left: 10px;
+  color: red;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(4) {
+  width: 100%;
+  padding-left: 145px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 28px;
+  line-height: 28px;
+  z-index: 3;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(4) > a:nth-of-type(1) {
+  padding: 5px;
+  color: red;
+  border: 1px dashed #e92322;
+}
+.list .list_con > ul > li .list_right > div:nth-of-type(4) > a:nth-of-type(2) {
+  padding: 0 10px;
+  color: #fff;
+  float: right;
+  background-color: #FF5E5D;
+  border-radius: 10px;
+}
+/*backTop��ʼ*/
+a.backTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-family: consolas;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 999;
+  display: none;
+}
+/*�ȴ�loading��ʾ*/
+.loading {
+  position: fixed;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  font-size: 35px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 888;
+  bottom: 50px;
+  left: 50%;
+  border-radius: 30px;
+  margin-left: -100px;
+  font-family: consolas;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.loading::after,
+.loading::before {
+  content: "";
+  width: 200px;
+  position: absolute;
+  height: 50px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  right: 0;
+  top: 0;
+}
+.loading::after {
+  animation: afterM 1s forwards;
+}
+.loading::before {
+  animation: beforeM 1s forwards;
+}
+.loading.show {
+  display: block;
+}
+@keyframes beforeM {
+  from {
+    transform: rotate(45deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(405deg);
+    opacity: 0.5;
+  }
+}
+@keyframes afterM {
+  from {
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(315deg);
+    opacity: 0.5;
+  }
+}
+/*�齱���ֿ�ʼ*/
+.goodluck {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  left: 0;
+  top: 0;
+  z-index: 900;
+  /*���ý�Ʒ*/
+}
+.goodluck .bottom {
+  z-index: 999;
+  max-width: 540px;
+  min-width: 340px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.goodluck .bottom img {
+  width: 100%;
+  display: block;
+}
+.goodluck .bottom .top {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+}
+.goodluck .bottom .goodbutton {
+  position: absolute;
+  width: 64%;
+  left: 13%;
+  bottom: 13%;
+  z-index: 1000;
+}
+.goodluck .bottom #press {
+  position: absolute;
+  z-index: 1002;
+  width: 25%;
+  height: 13%;
+  left: 37%;
+  bottom: 21%;
+}
+.goodluck .bottom .ullist {
+  position: absolute;
+  left: 15%;
+  top: 41%;
+  width: 70%;
+  height: 16%;
+  z-index: 1222;
+  overflow: hidden;
+  /*#ul1 {
+      .anim(moveUl 1.5s linear 2);
+    }
+    #ul2 {
+      .anim(moveUl 1.5s linear 4);
+    }
+    #ul3 {
+      .anim(moveUl 1.5s linear 6);
+    }*/
+}
+.goodluck .bottom .ullist ul {
+  width: 33.33%;
+  float: left;
+  transition: all 2s ease-out;
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+}
+.goodluck .bottom .ullist ul li {
+  width: 100%;
+}
+.goodluck .bottom .ullist ul li img {
+  width: 100%;
+  display: block;
+}
+.goodluck .getMoney {
+  width: 100%;
+  z-index: 1200;
+  max-width: 540px;
+  min-width: 340px;
+  position: absolute;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.goodluck .getMoney img {
+  width: 100%;
+  display: block;
+}
+.goodluck .getMoney .text {
+  position: absolute;
+  z-index: 1201;
+  width: 68%;
+  height: 11%;
+  left: 16%;
+  bottom: 50%;
+}
+.goodluck .getMoney .text span#money {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 80px;
+  color: transparent;
+  text-shadow: 0 0 4px #fffea5,0 0 30px #ffe218,0 0 70px #eee;
+}
+.goodluck .publilcgo {
+  position: absolute;
+  z-index: 2000;
+  width: 95px;
+  top: 1%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #f8f8f8;
+  background-color: rgba(255, 123, 94, 0.5);
+  border-radius: 15px;
+}
+.goodluck #backhome {
+  position: absolute;
+  z-index: 2000;
+  width: 95px;
+  top: 1%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #f8f8f8;
+  background-color: rgba(255, 123, 94, 0.5);
+  border-radius: 15px;
+  left: 10%;
+}
+.goodluck #gobaicai {
+  position: absolute;
+  z-index: 2000;
+  width: 95px;
+  top: 1%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #f8f8f8;
+  background-color: rgba(255, 123, 94, 0.5);
+  border-radius: 15px;
+  right: 10%;
+}
+/*�齱����*/
+@keyframes moveUl {
+  0% {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+  }
+  99.99% {
+    transform: translateY(-90.91%);
+    -webkit-transform: translateY(-90.91%);
+    -moz-transform: translateY(-90.91%);
+    -ms-transform: translateY(-90.91%);
+  }
+  100% {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+  }
+}
+/*����������ҳ����*/
+.fixedNav {
+  bottom: 150px;
+  right: 0;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: url("../images/coudanhome.svg");
+  z-index: 500;
+}
+.fixedNav .menu {
+  display: none;
+  border: 4px solid #d3d3d3;
+  border-radius: 14px;
+  background: #f2f2f2;
+  position: fixed;
+  min-width: 60%;
+  width: 60%;
+  top: 0;
+  left: 50px;
+}
+.fixedNav .menu ul {
+  padding-bottom: 15px;
+}
+.fixedNav .menu ul li {
+  display: block;
+  text-align: center;
+  float: left;
+  width: 25%;
+}
+.fixedNav .menu ul li a {
+  font-size: 14px;
+  display: block;
+  color: #000;
+}
+.fixedNav .menu ul li a img {
+  display: block;
+  width: 100%;
+  padding: 15px 15px 8px 15px;
+}
+.fixedNav .menu ul li a p {
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+}

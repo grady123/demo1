@@ -1,0 +1,228 @@
+.layout {
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    font-family: "microsoft YaHei";
+}
+
+.category {
+    width: 100%;
+}
+.category-title{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding-left: 5px;
+}
+.brand-list {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    color:orange;
+    background: #eeeeee;
+    padding-left: 10px;
+    border-bottom: 1px solid #cccccc;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+.brand-content {
+    width: 100%;
+}
+.brand-content ul {
+    width: 100%;
+}
+.brand-content ul li {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #cccccc;
+    position: relative;
+}
+.brand-content ul li a{
+    width: 100%;
+    height: 60px;
+    display: block;
+}
+.brand-content ul li a>span:first-of-type {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #ffffff;
+}
+.brand-content ul li a>span:first-of-type.normal {
+    background: #cccccc;
+}
+.brand-content ul li a>span:first-of-type.first {
+    background: red;
+}
+.brand-content ul li a>span:first-of-type.second {
+    background: orange;
+}
+.brand-content ul li a>span:first-of-type.third {
+    background: lawngreen;
+}
+.brand-content ul li a>div {
+    float: left;
+    margin-top: 12px;
+    margin-left: 40px;
+    color: #cccccc;
+}
+.brand-content ul li a>div p:first-of-type {
+    font-size: 14px;
+    color: #000000;
+}
+.brand-content ul li span:last-of-type {
+    float: right;
+    margin-top: 24px;
+    margin-right: 10px;
+}
+.brand-content > div {
+    width: 100%;
+    margin-top: 10px;
+}
+.brand-content > div a {
+    display: block;
+    width: 100%;
+}
+.brand-content > div a img {
+    display: block;
+    width: 100%;
+}
+
+.product-list {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    color:orange;
+    background: #eeeeee;
+    padding-left: 10px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+.product-content {
+    width: 100%;
+}
+.product-content ul {
+    width: 100%;
+}
+.product-content ul li {
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid #cccccc;
+}
+.product-content ul li a {
+    width: 100%;
+    height: 120px;
+    display: block;
+}
+.product-content ul li a .left {
+    float: left;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+}
+.product-content ul li a .left img {
+    width: auto;
+    height: 100px;
+
+}
+.product-content ul li a .right {
+    overflow: hidden;
+}
+.product-content ul li a .right>p {
+    margin-top: 10px;
+    font-size: 14px;
+    height: 50px;
+}
+.product-content ul li a .right .price > span {
+    float: left;
+    font-size: 16px;
+    color:#e92322;
+}
+.product-content ul li a .right .price > div {
+    float: right;
+    font-size: 16px;
+    color:orange;
+    margin-top: 2px;
+    padding-right: 10px;
+}
+.product-content ul li a .right .msg {
+    color: #cccccc;
+}
+.product-content ul li a .right .msg span {
+    padding-right: 10px;
+}
+/*ÆÀÂÛ*/
+.sales-list {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    color:orange;
+    background: #eeeeee;
+    padding-left: 10px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+.sales-content {
+    width: 100%;
+}
+.sales-content ul {
+    width: 100%;
+}
+.sales-content ul li {
+    width: 100%;
+    /*height: 120px;*/
+    border-bottom: 1px solid #cccccc;
+    padding: 10px;
+}
+.sales-content ul li a {
+    width: 100%;
+    /*height: 120px;*/
+    display: block;
+}
+.sales-content ul li a .top-left {
+    float: left;
+    width: 100px;
+}
+.sales-content ul li a .top-left img {
+    width: auto;
+    height: 80px;
+
+}
+.sales-content ul li a .top-right {
+    overflow: hidden;
+    font-size: 15px;
+    color: #aaaaaa;
+}
+.sales-content ul li a .bottom {
+    border: 1px solid #cccccc;
+    background: #eeeeee;
+    padding: 10px;
+    border-radius: 3px;
+}
+.sales-content ul li a .bottom .bt-left {
+    float: left;
+    color:green;
+    font-size: 14px;
+}
+.sales-content ul li a .bottom .bt-left span {
+    color: orange;
+}
+.sales-content ul li a .bottom .bt-right {
+    float: right;
+    color: #aaaaaa;
+}
+.sales-content ul li a .bottom .bb {
+    font-size: 14px;
+    padding: 5px;
+}

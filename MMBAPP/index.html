@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/search.css"/>
+    <link rel="shortcut icon" href="manmanmai.ico"/>
+</head>
+
+<script type="text/template" id="nav_temp">
+    <% for(var i=0;i< result.length;i++){ %>
+    <li>
+        <a href="<%=i==7?'javascript:void(0)':result[i].titlehref%>">
+            <%=#result[i].img%>
+            <p><%=result[i].name%></p>
+        </a>
+    </li>
+    <% } %>
+</script>
+
+<body>
+<div class="layout">
+    <!--header-->
+    <header>
+        <a href="index.html"><div class="logo_left"></div></a>
+        <div class="logo_con"></div>
+        <a href="#"><div class="logo_right"></div></a>
+    </header>
+    <!--搜索-->
+    <div class="mySearch">
+        <div class="serach_t">
+            <input type="search" placeholder="请输入你想搜索的商品"/>
+            <a href="javascript:void(0);" id="goSearch">搜索</a>
+        </div>
+
+        <div class="box">
+            <ul id="ul">
+
+            </ul>
+        </div>
+    </div>
+    <!--loop-->
+    <div class="money">
+                <img src="images/TB1jJ8MOXXXXXbvapXXSutbFXXX.jpg_600x600Q80s0.jpg"  alt="">
+                <div class="screen">
+                    <a href="" class="one">
+                        <span>国内折扣</span><br>
+                        <span>海外淘</span>
+                    </a>
+                    <a href="" class="two">
+                        <span>国内折扣</span><br>
+                        <span>海外淘</span>
+                    </a>
+                    <a href="" class="thre">
+                        <span>国内折扣</span><br>
+                        <span>海外淘</span>
+                    </a>
+                </div>
+                <div class="hongbao"><a href="baicaijia.html"><img src="images/TB19IyiOXXXXXaxaVXXXXXXXXXX-322-76.png" alt=""></a></div>
+                <div class="banner">
+        <ul class="ulBox">
+            <li>
+                <a>
+                    <img src="images/loop.png" alt=""/>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="images/loop.png" alt=""/>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="images/loop.png" alt=""/>
+                </a>
+            </li>
+        </ul>
+        <ul class="ul_two">
+            <li class="li_two"></li>
+        </ul>
+    </div>
+            </div>
+    
+    <!--nav-->
+    <div class="nav">
+        <ul class="nav_ul">
+        </ul>
+    </div>
+    <!--商品nav-->
+    <div class="commodity">
+        <span class="commodity_one">超值折扣推荐</span>
+        <a href="moneyctrl.html"><span class="commodity_two"></span></a>
+    </div>
+    <!--商品NAV内容-->
+    <div class="commodity_con">
+            <ul class=text_ul>
+           
+        </ul>
+    </div>
+    <!--点击加载更多优惠信息-->
+    <div class="jz">
+        <a href="moneyctrl.html">
+       <div class="jz_con">
+           <h5>更多优惠信息 »</h5>
+       </div>
+        </a>
+    </div>
+    <!--底部-->
+    <div class="foot">
+        <div class="foot_t">
+            <span>品牌排行</span>
+            <a href="javascript:void(0)"></a>
+        </div>
+        <div class="foot_con clearFix">
+            <ul>
+                <li><a href="index_denglu.html">登录</a></li>
+                <li><a href="index_zhuce.html">注册</a></li>
+                <li><a href="#">返回顶部</a></li>
+            </ul>
+        </div>
+         <div class="foot_b">
+             <a href="javascript:void(0)">手机APP下载</a>
+             <a href="javascript:void(0)">慢慢买手机版</a>
+             <a href="javascript:void(0)">-- 掌上比价平台</a>
+             <p>m.manmanbuy.com </p>
+         </div>
+    </div>
+</div>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/template-native.js"></script>
+<script src="js/index.js"></script>
+<script src="js/mybase.js"></script>
+<script src="js/search.js"></script>
+</html>
+<script type="text/template" id="text">
+    <% for(var i=0;i< result.length;i++){ %>
+    <li>
+        <a href="moneyproduct.html?productid=<%=result[i].productId%>">
+            <div class="pic">
+                <%=#result[i].productImgSm%>
+            </div>
+            <div class="text">
+                <span class="text_one"><%=result[i].productName%></span>
+                <span class="text_two"><%=result[i].productPinkage%></span>
+                <span class="text_time"><%=result[i].productFrom%><%=result[i].productTime%></span>
+                <span class="icon_img fonts_icon fonts_icon_info"></span>
+                <span class="text_pl"><%=result[i].productComCount.replace("有","").replace("人评论","")%></span>
+            </div>
+        </a>
+    </li>
+    <% } %>
+</script>

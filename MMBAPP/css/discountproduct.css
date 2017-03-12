@@ -1,0 +1,380 @@
+.container {
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.cu-content {
+    padding: 4px 10px;
+    background: #fff
+}
+
+.cu-content h3 {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 10px auto 5px;
+    font-weight: 800;
+    text-align: left;
+    text-align-last: left;
+    word-break: break-all;
+    color: #5a5a5a;
+    line-height: normal
+}
+
+.cu-content h4 {
+    color: #ff6c00;
+    display: block;
+    font-size: 15px
+}
+
+.cu-content .info {
+    margin: 12px auto;
+    color: #999;
+    font-size: 12px
+}
+
+.cu-content .info span {
+    color: #999;
+    vertical-align: middle
+}
+
+.cu-content .info span.author {
+    margin-right: 4px
+}
+
+.cu-content .info span.mall {
+    margin: 0 4px
+}
+
+.cu-content .info span.time {
+    margin-left: 4px
+}
+
+.cu-content .conn {
+    font-size: 16px;
+    line-height: 24px;
+    color: #606060;
+    padding-bottom: 20px
+}
+
+.cu-content .conn a, .cu-content .conn b, .cu-content .conn em, .cu-content .conn span, .cu-content .conn strong {
+    display: inline
+}
+
+.cu-content .conn p {
+    line-height: 24px;
+    color: #606060;
+    margin: 6px auto
+}
+
+.cu-content .conn a {
+    color: #4682c5;
+    text-decoration: none;
+
+}
+
+.cu-content .conn img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0
+}
+
+.cu-content .picwrap {
+    width: 120px;
+    float: right;
+    margin: 12px auto auto 10px;
+    overflow: hidden
+}
+
+.cu-content .picwrap img {
+    width: 120px;
+    height: 120px
+}
+
+.cu-content .picwrap .buy {
+    text-align: center;
+    margin: 6px auto
+}
+
+.cu-content .picwrap .buy a {
+    font-family: Arial, Helvetica;
+    display: block;
+    background: #ff9000;
+    border: 1px solid #ee7101;
+    color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+    padding: 6px 0
+}
+
+.cu-content .picwrap .buy .item-hover {
+    background-color: #ee7101
+}
+
+.cu-content a.con-link {
+    color: #4682c5
+}
+
+.cu-content a.con-link:visited {
+    color: blue
+}
+
+.cu-content a.con-link i {
+    background-size: contain;
+    vertical-align: middle;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="#4682c5" d="M900.201 385.02099999999996L738.452 546.775c-35.735 35.731-93.669 35.731-129.404 0l-32.35-32.354 64.7-64.695c17.87 17.861 46.834 17.861 64.704 0l97.049-97.054c17.865-17.865 17.865-46.834 0-64.7l-97.049-97.049c-17.87-17.87-46.834-17.87-64.704 0l-97.049 97.049c-17.865 17.865-17.865 46.834 0 64.7l-64.7 64.7-32.35-32.35c-35.735-35.731-35.735-93.669 0-129.399l161.749-161.75c35.735-35.735 93.669-35.735 129.404 0l161.749 161.749c35.735 35.73 35.735 93.668 0 129.399zM382.599 579.125l226.449-226.453 32.35 32.35L414.949 611.47l-32.35-32.345zm0-64.705c-17.865-17.865-46.834-17.865-64.7 0l-97.054 97.049c-17.865 17.87-17.865 46.834 0 64.704l97.054 97.049c17.865 17.865 46.834 17.865 64.7 0l97.049-97.049c17.865-17.87 17.865-46.834 0-64.704l64.7-64.7 32.35 32.354c35.735 35.731 35.735 93.664 0 129.399L414.949 870.273c-35.731 35.731-93.669 35.731-129.399 0L123.796 708.524c-35.731-35.735-35.731-93.669 0-129.399L285.55 417.371c35.731-35.731 93.669-35.731 129.399 0l32.35 32.35-64.7 64.699z"/></svg>')
+}
+
+.cu-content .golink a {
+    display: block;
+    margin: 20px 10px;
+    background: #ff9000;
+    height: 30px;
+    border-radius: 4px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff
+}
+
+.cu-content .golink a.a-gobuy i.icon-gobuy {
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="#FFF" d="M365.921 811.382c-39.031 0-70.785 31.754-70.785 70.785s31.754 70.784 70.785 70.784c39.03 0 70.784-31.753 70.784-70.784s-31.753-70.785-70.784-70.785zm0 90.402c-10.818 0-19.62-8.801-19.62-19.618 0-10.819 8.802-19.62 19.62-19.62s19.619 8.801 19.619 19.62c0 10.818-8.8 19.618-19.619 19.618zm442.9-90.402c-39.03 0-70.784 31.754-70.784 70.785s31.753 70.784 70.784 70.784 70.785-31.753 70.785-70.784-31.754-70.785-70.785-70.785zm0 90.402c-10.817 0-19.619-8.801-19.619-19.618 0-10.819 8.802-19.62 19.62-19.62 10.818 0 19.62 8.801 19.62 19.62 0 10.818-8.801 19.618-19.62 19.618zM443.991 590.06c-14.057 1.416-24.305 13.96-22.89 28.017 1.328 13.187 12.446 23.021 25.423 23.021.856 0 1.723-.043 2.594-.13l439.314-44.246c.088-.008.175-.019.262-.027l.18-.018a26.426 26.426 0 0 0 2.16-.317 26 26 0 0 0 1.638-.355c.086-.022.17-.047.255-.07a25.415 25.415 0 0 0 1.728-.53c.078-.026.156-.05.233-.078.627-.222 1.24-.47 1.841-.738l.12-.054a25.456 25.456 0 0 0 3.646-2.02l.003-.002a25.633 25.633 0 0 0 1.816-1.335c.486-.39.958-.795 1.413-1.218.092-.085.18-.174.27-.26a25.78 25.78 0 0 0 1.48-1.537c.333-.378.653-.767.965-1.164.123-.158.25-.314.37-.476a26.544 26.544 0 0 0 2.104-3.322c.07-.131.134-.265.202-.397.29-.57.563-1.148.811-1.739l.008-.022a25.485 25.485 0 0 0 1.347-4.268l.003-.013c.036-.163.076-.323.108-.487l56.18-252.734c.895-4.031.78-8.048-.166-11.795.505-2.003.775-4.101.775-6.261 0-14.13-11.453-25.583-25.583-25.583H195.475l-52.358-159.554c-3.632-11.067-14.094-17.972-25.178-17.59-.208-.006-.413-.016-.622-.016H54.664c-14.129 0-25.583 11.454-25.583 25.583s11.454 25.582 25.583 25.582h45.615l197.955 603.236c3.537 10.777 13.547 17.613 24.304 17.613a25.5 25.5 0 0 0 6.245-.789h567.584c14.13 0 25.583-11.453 25.583-25.582s-11.453-25.583-25.583-25.583h-555.55L212.264 331.066H913.49l-48.137 216.557L443.99 590.06z"/></svg>');
+    width: 16px;
+    height: 16px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    vertical-align: -2px;
+    display: inline-block
+}
+
+.cu-content .golink a.a-haitao {
+    background-color: #e54346
+}
+
+.cu-content .golink a.a-haitao i.icon-haitao {
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="#FFF" d="M932.582 100.294l-5.299-5.299c-37.146-37.12-101.862-37.146-139.034 0L586.035 297.209 148.48 214.188c-6.118-1.126-12.672.794-17.152 5.299L72.96 277.855c-4.378 4.378-6.374 10.624-5.376 16.742a19.172 19.172 0 0 0 10.522 14.08l328.73 160.666-140.595 140.57-149.069-11.264a19.267 19.267 0 0 0-15.027 5.581l-59.699 59.699c-4.582 4.582-6.554 11.162-5.222 17.485s5.76 11.597 11.776 13.952l198.042 77.952 85.76 206.08a19.222 19.222 0 0 0 14.003 11.469c1.229.23 2.483.358 3.738.358 5.043 0 9.958-1.997 13.568-5.632l65.024-65.024a19.229 19.229 0 0 0 5.555-15.258l-12.493-142.336 136.909-136.883 164.429 320.179a19.158 19.158 0 0 0 14.106 10.189c6.016 1.024 12.211-1.05 16.538-5.376l59.699-59.699a19.115 19.115 0 0 0 5.248-17.357L731.83 440.134l200.806-200.781c38.272-38.349 38.272-100.71-.051-139.059zm-27.136 111.898L697.369 420.243a19.115 19.115 0 0 0-5.248 17.357l87.296 433.894-33.792 33.792-164.429-320.179a19.158 19.158 0 0 0-14.106-10.189c-6.016-.947-12.211 1.05-16.538 5.376L388.709 742.137a19.229 19.229 0 0 0-5.555 15.258l12.493 142.31-38.426 38.4-77.85-187.11c-1.997-4.813-5.862-8.576-10.701-10.496L90.315 670.304l32.742-32.742 149.069 11.264c5.555.486 11.11-1.613 15.027-5.581L452.99 477.408c4.378-4.378 6.374-10.624 5.376-16.742a19.172 19.172 0 0 0-10.522-14.08l-328.73-160.589 32.179-32.179 437.555 83.021c6.144 1.203 12.672-.768 17.152-5.299l209.408-209.408c22.682-22.63 62.08-22.605 84.762 0l5.299 5.299c23.322 23.398 23.322 61.414-.026 84.762z"/></svg>');
+    width: 16px;
+    height: 16px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    vertical-align: -2px;
+    display: inline-block
+}
+
+.cu-content-pl {
+    background-color: #fff
+}
+
+.cu-content-pl .hover {
+    background-color: #f8f8f8 !important
+}
+
+.cu-content-pl .tit {
+    font-size: 16px;
+    padding: 6px 8px
+}
+
+.cu-content-pl .reply {
+    padding: 6px 8px
+}
+
+.cu-content-pl .reply .form {
+    border: 2px solid #eceae8;
+    border-radius: 2px;
+    padding: 4px 0 0 4px;
+    background-color: #fff;
+    position: relative;
+    width: 98%;
+    margin: 0 auto
+}
+
+.cu-content-pl .reply .form textarea {
+    width: 100%;
+    resize: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: none;
+    line-height: 22px;
+    font-size: 14px;
+    outline: 0;
+    color: #666;
+    height: 68px
+}
+
+.cu-content-pl .reply .form .ctrl {
+    background-color: #fbfbfb;
+    height: 36px;
+    margin-left: -4px;
+    border-top: 1px solid #f2f2f2
+}
+
+.cu-content-pl .reply .form .ctrl button, .cu-content-pl .reply .form .ctrl input {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    background: #ff841d;
+    border: none;
+    border: 2px solid #ff841d;
+    border-left: none;
+    border-top: none;
+    padding: 0;
+    width: 100px;
+    height: 39px;
+    color: #fff;
+    outline: 0;
+    border-radius: 0 0 2px 0;
+    font-size: 16px
+}
+
+.cu-content-pl .list ul li {
+    padding: 18px 10px;
+    background-color: #fff
+}
+
+.cu-content-pl .list .userimg {
+    width: 40px;
+    float: left;
+    overflow: hidden
+}
+
+.cu-content-pl .list .userimg img {
+    width: 40px;
+    background-position: top;
+    border-radius: 20px;
+    height: 40px
+}
+
+.cu-content-pl .list .con {
+    overflow: hidden;
+    padding-left: 10px
+}
+
+.cu-content-pl .list .con .name {
+    margin-bottom: 6px
+}
+
+.cu-content-pl .list .con .name .username {
+    color: #5997c0;
+    font-size: 13px !important;
+    float: left
+}
+
+.cu-content-pl .list .con .name .time {
+    color: #999;
+    font-size: 13px !important;
+    float: right
+}
+
+.cu-content-pl .list .con .yinyong {
+    background-color: #fbfbfb;
+    border: 1px solid #eee;
+    padding: 4px 6px;
+    border-radius: 3px;
+    margin-top: 2px
+}
+
+.cu-content-pl .list .con .yinyong .item:first-child {
+    border-top: none
+}
+
+.cu-content-pl .list .con .yinyong span {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 13px !important
+}
+
+.cu-content-pl .list .con .content {
+    word-break: break-all;
+    font-size: 15px !important;
+    color: #606060;
+    line-height: 20px
+}
+
+.cu-content-pl .list .con .content img {
+    vertical-align: middle
+}
+
+.cu-content-pl .more {
+    text-align: center;
+    color: #999;
+    line-height: 70px
+}
+
+.cu-content-pl .no-comment {
+    color: #999;
+    padding: 20px 0;
+    font-size: 12px
+}
+
+.cu-content-pl .no-comment .icon-shafa {
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="40"><path fill="#999" d="M241.403 574.735c4.532-100.756-41.709-138.86-102.219-159.377-36.62-335.373 571.095-331.061 699.45-172.644 30.831 38.062 48.279 107.39 48.41 172.644-60.943 19.962-111.187 53.141-102.205 159.377 0 0-263.374-135.81-543.436 0zm-27.159 39.841c40.604-176.791-137.98-215.122-150.65-73.035-9.318 104.41 44.408 225.89 75.315 278.894 5.199 1.634 10.265 3.392 15.622 4.848h18.993v33.585c0 15.155 16.845 27.46 37.61 27.46 20.778 0 37.63-12.306 37.63-27.46v-33.585h527.06v33.585c0 15.155 16.856 27.46 37.643 27.46 20.793 0 37.637-12.306 37.637-27.46v-33.585h16.982c6.832-3.09 11.961-8.282 18.676-11.496 32.411-70.453 93.862-188.026 69.987-298.821-16.103-74.375-122.524-89.927-145.302 0-10.08 39.89 15.754 63.49-10.767 106.256.001 0-268.132-160.173-586.436-6.646z"/></svg>');
+    display: block;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    height: 40px
+}
+
+.area span.s {
+    position: relative;
+    display: inline-block;
+    line-height: 38px;
+    padding: 0 20px 0 16px;
+    cursor: pointer;
+    z-index: 1
+}
+
+.area span.s i {
+    display: inline-block;
+    margin-left: 6px
+}
+
+.area span .drop {
+    display: none;
+    left: -6px;
+    padding: 0 0 10px;
+    background-color: #fff;
+    width: 138px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .1);
+    border-color: #f1f1f1 #f1f1f1 #dbdbdb;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    *top: 36px
+}
+
+.area span .drop ul li {
+    font-size: 12px;
+    font-family: Microsoft Yahei;
+    line-height: 20px
+}
+
+.area span .drop ul li a {
+    display: block;
+    padding: 0 10px
+}
+
+.area span .drop ul li a:hover {
+    background-color: #f7f6f4
+}
+
+.area span .drop ul li a span {
+    border-bottom: 1px dotted silver;
+    display: block;
+    padding: 0 10px;
+    text-align: left
+}
+
+.area span .drop strong {
+    float: right;
+    font-weight: 400;
+    *margin-top: -40px
+}
+
+.area strong {
+    color: #f27b04;
+    font-weight: 400
+}

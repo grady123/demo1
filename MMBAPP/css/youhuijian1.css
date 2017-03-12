@@ -1,0 +1,210 @@
+.nav_1 {
+  height: 44px;
+  width: 100%;
+  background: #f4483e;
+  position: fixed;
+  z-index: 3000;
+}
+.nav_1 .you {
+  position: absolute;
+  left: 0px;
+}
+.nav_1 .you a {
+  background: url("../images/2016-11-06_111729.jpg") 5px 1px no-repeat;
+  width: 50px;
+  height: 44px;
+  display: block;
+}
+.nav_1 h1 {
+  line-height: 44px ;
+  color: #fff;
+  font-family: none;
+  padding: 0px 50px ;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+.nav_1 .zuo {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.nav_1 .zuo a {
+  width: 50px;
+  height: 44px;
+  display: block;
+  background: url("../images/header_app.png") 1px 6px no-repeat;
+  background-size: 32px 30px ;
+}
+.chen {
+  padding-top: 44px;
+}
+.chanpin {
+  overflow: hidden;
+}
+.chanpin .chanpin1 {
+  padding: 10px 0;
+}
+.chanpin .chanpin1 li {
+  width: 120px;
+  height: 75px;
+  margin: 3px ;
+  border: 1px solid #e8e2e2;
+  text-align: center;
+  float: left;
+}
+.chanpin .chanpin1 li a {
+  display: block;
+  padding: 0 auto;
+  padding-top: 5px;
+}
+.chanpin .chanpin1 li img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+.weibu {
+  margin-top: 20px  ;
+  height: 92px;
+  background-color: #EFEFEF;
+  text-align: center;
+}
+.weibu > div {
+  border-top: 1px solid #C7C7C7;
+  border-bottom: 1px solid #C7C7C7;
+  width: 33.33%;
+  line-height: 34px;
+  text-align: center;
+  font-size: 13px ;
+  height: 34px;
+  float: left;
+  overflow: hidden;
+}
+.weibu > div a {
+  width: 100%;
+  display: block;
+}
+.weibu > div:nth-of-type(2) {
+  border: 1px solid  #C7C7C7;
+}
+.weibu > div:nth-of-type(3) img {
+  width: 15px ;
+  vertical-align: middle;
+  margin-right: 3px ;
+  padding-bottom: 4px ;
+}
+.weibu p:nth-of-type(1) {
+  padding-top: 46px;
+  color: #000;
+}
+.weibu p:nth-of-type(1) span:nth-of-type(1) {
+  color: red;
+}
+.weibu p:nth-of-type(1) span:nth-of-type(2) {
+  color: #666666;
+}
+.weibu p:nth-of-type(2) {
+  color: #666666;
+}
+.p {
+  text-align: center;
+  line-height: 30px;
+  font-family: "宋体";
+  color: #999999;
+}
+.libiao {
+  overflow: hidden;
+}
+.libiao li {
+  padding: 10px;
+  overflow: hidden;
+  border-bottom: 1px solid #E7E7E7;
+}
+.libiao li a {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 10px;
+  position: relative;
+}
+.libiao li a div:nth-of-type(1) {
+  position: absolute;
+  left: 1px ;
+}
+.libiao li a div:nth-of-type(1) img {
+  width: 100px;
+}
+.libiao li a div:nth-of-type(2) {
+  padding-left: 110px;
+}
+.libiao li a div:nth-of-type(2) p {
+  font-size: 14px ;
+}
+.libiao li a div:nth-of-type(2) h2 {
+  font-size: 13px ;
+}
+.libiao li a div:nth-of-type(2) span {
+  color: #EE7700;
+  display: block;
+  margin-top: 21px;
+  font-family: "宋体";
+}
+.libiao li a .img {
+  position: absolute;
+  right: 0px ;
+  top: 50%;
+  margin-top: -15px;
+}
+.libiao li a .img img {
+  width: 30px;
+  vertical-align: middle;
+}
+.zezao {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.zezao .lun {
+  width: 200px;
+  height: 160px;
+  position: absolute;
+  right: 50%;
+  margin-right: -100px;
+  bottom: 50%;
+  margin-bottom: -80px;
+  overflow: hidden;
+}
+.zezao .lun .lunbo {
+  position: absolute;
+  left: 0;
+}
+.anniu {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: -35px;
+  height: 0px;
+}
+.anniu span {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  background: #3e3e3e;
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px ;
+  line-height: 70px;
+  font-family: cursiv;
+}
+.anniu span:nth-of-type(1) {
+  float: right;
+}
+.anniu span:nth-of-type(2) {
+  float: left;
+}

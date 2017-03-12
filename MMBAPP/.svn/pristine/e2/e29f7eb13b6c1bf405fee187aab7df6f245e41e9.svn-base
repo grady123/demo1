@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="manmanmai.ico"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/category.css"/>
+    <title>category</title>
+
+</head>
+<body>
+<header>
+    <a href="index.html"><div class="logo_left"></div></a>
+    <div class="logo_con"></div>
+    <a href="#"><div class="logo_right"></div></a>
+</header>
+<nav>
+    <a href="index.html">首页></a>
+    <a href="javascript:void(0)">全部分类</a>
+</nav>
+<script type="text/template" id="categoryTitle">
+    <%for(var i=0;i< result.length;i++){%>
+        <li>
+            <input type="radio" id="ac-<%=i%>" name="ac-3D" data-title-id="<%=result[i].titleId%>"/>
+            <label for="ac-<%=i%>" onclick="" title="<%= result[i].title%>"><%= result[i].title%></label>
+            <!--<a href="javascript:void(0)" id="<%=result[i]._id%>" data-title-id="<%=result[i].titleId%>">-->
+                <!--<%= result[i].title%>-->
+            <!--</a>-->
+            <article> </article>
+        </li>
+    <%}%>
+</script>
+<script type="test/template" id="categoryProduct">
+    <%for(var i=0;i< result.length;i++){%>
+        <a href="productList.html?categoryid=<%=result[i].categoryId%>&pageid=1" id="<%= result[i]._id%>" data-title-id="<%=result[i].categoryId%>">
+            <%= result[i].category%>
+        </a>
+    <%}%>
+</script>
+<section id="category"  style="max-width: 640px ;margin: 0 auto">
+    <ul class="title">
+        <!--<li>-->
+            <!--<a href=""></a>-->
+            <!--<ul class="product">-->
+                <!--<li>-->
+                    <!--<a href=""></a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</li>-->
+    </ul>
+</section>
+<div class="foot">
+    <div class="foot_con clearFix">
+        <ul>
+            <li><a href="index_denglu.html">登录</a></li>
+            <li><a href="index_zhuce.html">注册</a></li>
+            <li><a href="#">返回顶部</a></li>
+        </ul>
+    </div>
+    <div class="foot_b">
+        <a href="javascript:void(0)">手机APP下载</a>
+        <a href="javascript:void(0)">慢慢买手机版</a>
+        <a href="javascript:void(0)">-- 掌上比价平台</a>
+        <p>m.manmanbuy.com </p>
+    </div>
+</div>
+<nav id="ad">
+    <input type="button" value="×" class="close">
+    <span>慢</span>
+    <div>
+        <p>慢慢买</p>
+        <p>全网比价,省钱专家</p>
+    </div>
+    <a href="#">立即打开</a>
+</nav>
+<div class="fixedNav">
+    <div class="menu">
+        <script type="text/template" id="coudanIndex">
+            <% for(var i=0;i< result.length;i++){ %>
+            <li>
+                <a href="<%=i==7?'javascript:void(0)':result[i].titlehref%>">
+                    <%=#result[i].img%>
+                    <p><%=result[i].name%></p>
+                </a>
+            </li>
+            <% } %>
+        </script>
+        <ul class="clearFix">
+
+        </ul>
+    </div>
+</div>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/template-native.js"></script>
+<script src="js/base.js"></script>
+<script src="js/category.js"></script>
+</body>
+
+</html>

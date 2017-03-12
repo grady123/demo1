@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/moneyproduct.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/discountheader.css"/>
+
+</head>
+<body>
+<div class="layout">
+    <header>
+        <div class="back">
+            <a href="moneyctrl.html" class="icon-fanhui iconfont"></a>
+        </div>
+        <h1>省钱控-最新优惠</h1>
+
+        <div class="app">
+
+        </div>
+    </header>
+    <div class="con clearFix">
+    </div>
+    <div class="foot">
+        <div class="foot_con clearFix">
+            <ul>
+                <li><a href="index_denglu.html">登录</a></li>
+                <li><a href="index_zhuce.html">注册</a></li>
+                <li><a href="#">返回顶部</a></li>
+            </ul>
+        </div>
+        <div class="foot_b">
+            <a href="javascript:void(0)">手机APP下载</a>
+            <a href="javascript:void(0)">慢慢买手机版</a>
+            <a href="javascript:void(0)">-- 掌上比价平台</a>
+
+            <p>m.manmanbuy.com </p>
+        </div>
+    </div>
+</div>
+ <script type="text/template" id="productid">
+
+             <h3 class="title"><%=items.productName%> </h3>
+             <h4><%=items.productPrice%></h4>
+             <div class="info">
+                 <span class="mall"><%=items.productFrom%></span>
+                 <span class="addtime" style="margin-right: 4px;"><%=items.productTime%></span>
+                 <span class="author"><%=items.productTips%></span>
+             </div>
+             <div class="content clearfix">
+                 <div class="picwrap">
+                     <%=#items.productImgSm%></div>
+                 <div class="conn">
+                     <!--内容开始-->
+                     <p><%=items.productInfo %></p>
+                     <p><%=#items.productImg %></p>
+                     <p><%=#items.productInfo1 %></p>
+                     <p><%=#items.productInfo3 %></p>
+                     <p><%=#items.productImg2 %></p>
+                     <p><%=#items.productImg3 %></p>
+                     <!--内容结束-->
+                 </div>
+             </div>
+             <center>
+                 <div class="area">
+                     <span class="s"><a href="javascript:;" style=" display:none;"><font id="fqy">广东</font><i class="iconfont">+</i></a>
+              			<div class="drop" style="display: block;">
+                            <%=#items.productCity %>
+                        </div>
+                    </span>
+                     <!--<strong >有货</strong>-->
+                 </div>
+             </center>
+             <div class="golink">
+                 <a href="redirect.aspx?tjid=521575&amp;y=cu_share" target="_blank"><i class="icon-gobuy"></i>前往购买</a></div>
+             </div>
+             <div style="text-align: center; margin: 20px 10px;">
+                 <img src="images/mmbweixin2.png" style="width: 100%; height: auto;">
+             </div>
+             <div class="cu-content-pl ui-border-t">
+                 <%=#items.productComment%>
+             </div>
+
+
+ </script>
+</div>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/template-native.js"></script>
+<script src="js/moneyproduct.js"></script>
+
+</html>

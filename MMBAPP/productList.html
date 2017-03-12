@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/productlist.css"/>
+</head>
+<body>
+    <!--product-list S-->
+    <!--product-list页面的列表项产品temp-->
+    <script type="text/template" id="pl-title-temp">
+        <% for(var i = 0; i < result.length; i++){  %>
+        <a href='productList.html?categoryid=<%=result[i].categoryId%>&pageid=1'><%=result[i].category%>&nbsp;&gt;</a>
+        <% } %>
+    </script>
+    <!--product-list-detail列表项temp-->
+    <script type="text/template" id="pl-detail-temp">
+        <% for(var i = 0; i < result.length; i++){ %>
+        <li>
+            <a href="bijia.html?productid=<%=result[i].productId%>">
+                <div class="detail-img">
+                    <%=#result[i].productImg%>
+                </div>
+                <div class="detail-txt">
+                    <h4><%=result[i].productName%></h4>
+                    <p><%=result[i].productPrice%></p>
+                    <p>
+                        <span><%=result[i].productQuote%>&nbsp;</span>
+                        <span><%=result[i].productCom%></span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        <% } %>
+    </script>
+    <!--product-choose列表项temp-->
+    <script type="text/template" id="chooseTemp">
+        <% for(var i = 0; i < result.length; i++ ){ %>
+            <li><a href="productList.html?categoryid=<%=result[i].categoryId%>&pageid=1"><%=result[i]%></a></li>
+        <% } %>
+    </script>
+
+    <div class="layout">
+        <div class="alert">
+            <div class="tip">
+                <div class="title">温馨提示: <span>×</span></div>
+                <div class="con">亲，已经是第一页啦!</div>
+            </div>
+        </div>
+
+        <!--publicOne S-->
+        <header>
+            <a href="index.html"><div class="logo_left"></div></a>
+            <div class="logo_con"></div>
+            <a href="#"><div class="logo_right"></div></a>
+        </header>
+        <div class="search">
+            <form action="" class="search_con">
+                <input type="search" placeholder="请输入你想要比价的商品">
+                <input type="button" value="搜索">
+            </form>
+        </div>
+        <!--publicOne E-->
+        <section id="product-list" class="product-list">
+            <nav id="product-list-title" class="product-list-title clearFix">
+                <a href="index.html">首页&nbsp;&gt;</a>
+                <a href="category.html">全部分类&nbsp;&gt;</a>
+                <span>筛选</span>
+            </nav>
+            <div class="choose">
+                <ul>
+                    <li id="brand">
+                        <a href="javascript:void(0)" >
+                            <span class="ff">按品牌</span>
+                        </a>
+                        <ul class="choose-con clearFix"></ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" id="price">
+                            <span class="ff">按价格</span>
+                        </a>
+                        <div class="price-info">
+                            <!--下面的内容js动态添加-->
+                            <!--<form action="" method="get"  >-->
+                            <!--<input type="search" name="lowPrice" id="lowPrice" placeholder="0.00"/>-->
+                            <!--<span>-</span>-->
+                            <!--<input type="search" name="highPrice" id="highPrice" placeholder="0.00"/><br/>-->
+                            <!--<input type="submit" value="筛选"/>-->
+                            <!--</form>-->
+                        </div>
+                    </li>
+                    <li><a href="" class="ff">按价格↓</a></li>
+                    <li><a href="" class="ff">按销量↓</a></li>
+                    <li><a href="" class="ff">按销量↓</a></li>
+                    <li><span>取消</span></li>
+                </ul>
+            </div>
+            <div class="product-list-detail">
+                <ul></ul>
+                <div class="page-list clearFix">
+                    <span id="pre-page">上一页</span>
+                    <select name="page" id="pl-page"></select>
+                    <span id="next-page">下一页</span>
+                </div>
+            </div>
+        </section>
+        <!--publicTwo S-->
+        <div class="foot">
+            <div class="foot_con clearFix">
+                <ul>
+                    <li><a href="index_denglu.html">登录</a></li>
+                    <li><a href="index_zhuce.html">注册</a></li>
+                    <li><a href="#">返回顶部</a></li>
+                </ul>
+            </div>
+            <div class="foot_b">
+                <a href="javascript:void(0)">手机APP下载</a>
+                <a href="javascript:void(0)">慢慢买手机版</a>
+                <a href="javascript:void(0)">-- 掌上比价平台</a>
+                <p>m.manmanbuy.com </p>
+            </div>
+        </div>
+        <!--publicTwo E-->
+    </div>
+    <!--product-list S-->
+    <!--publicThree S-->
+    <nav id="ad">
+        <input type="button" value="×" class="close">
+        <span>慢</span>
+        <div>
+            <p>慢慢买</p>
+            <p>全网比价,省钱专家</p>
+        </div>
+        <a href="#">立即打开</a>
+    </nav>
+    <div class="fixedNav">
+        <div class="menu">
+            <script type="text/template" id="coudanIndex">
+                <% for(var i=0;i< result.length;i++){ %>
+                <li>
+                    <a href="<%=i==7?'javascript:void(0)':result[i].titlehref%>">
+                        <%=#result[i].img%>
+                        <p><%=result[i].name%></p>
+                    </a>
+                </li>
+                <% } %>
+            </script>
+            <ul class="clearFix">
+
+            </ul>
+        </div>
+    </div>
+
+    <!--publicThree S-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="js/template-native.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/productlist.js"></script>
+</body>
+</html>

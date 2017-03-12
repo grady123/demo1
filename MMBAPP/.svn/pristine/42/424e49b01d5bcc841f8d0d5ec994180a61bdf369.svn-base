@@ -1,0 +1,64 @@
+/*添加公共样式*/
+
+/*重置*/
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    /*添加移动端特有的点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+    /*设置盒模型*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    list-style: none;
+}
+input{
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+    /*清除不同浏览器添加给控件的样式*/
+    -webkit-appearance: none;
+}
+
+
+/*公共*/
+body{
+    font-size: 12px;
+    color: #333;
+    font-family: "microsoft YaHei",sans-serif;
+}
+a:hover,a{
+    color: #333;
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+.m_l10{
+    margin-left: 10px;
+}
+.m_r10{
+    margin-right:10px;
+}
+.m_t10{
+    margin-top:10px;
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+
+/*清除浮动*/
+.clearFix::before,
+.clearFix::after{
+    content: "";
+    height: 0px;
+    line-height:0px;
+    display: block;
+    clear: both;
+    /*提高渲染效果：设置不可见，系统不会进行渲染*/
+    visibility: hidden;
+}

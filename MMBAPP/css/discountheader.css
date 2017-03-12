@@ -1,0 +1,120 @@
+/*Í·²¿*/
+.layout {
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+header {
+    max-width: 640px;
+    min-width: 320px;
+    background: #ff841d;
+    color: #FFFFFF;
+    height: 44px;
+    line-height: 44px;
+    width: 100%;
+    position: relative;
+}
+
+header .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .back a {
+    width: 50px;
+    padding: 0 10px;
+    color: #FFFFFF;
+    line-height: 44px;
+    display: block;
+    font-size: 20px;
+}
+
+header h1 {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+header .app {
+    padding: 5px 8px;
+    width: 50px;
+    height: 44px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    background: url("../images/header_app.png") center no-repeat;
+    background-size: 34px 34px;
+}
+
+/*µ×²¿*/
+.foot {
+    width: 100%;
+}
+
+.foot_t {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    position: relative;
+    background-color: #ff841d;
+    margin-bottom: 30px;
+}
+
+.foot_t a {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: url("../images/more.png") no-repeat;
+    background-size: 20px 20px;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+
+.foot_con {
+    width: 100%;
+}
+
+.foot_con ul {
+    width: 100%;
+}
+
+.foot_con ul li {
+    float: left;
+    width: 33%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    list-style: none;
+}
+
+.foot_con ul li:nth-of-type(2) {
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+}
+
+.foot_con ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.foot_b {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.foot_b a:first-of-type {
+    color: #e92322;
+}
+
+.foot_b a:nth-of-type(3) {
+    color: #cccccc;
+}

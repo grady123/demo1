@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>慢慢买比价网--手机版</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="shortcut icon" href="manmanmai.ico"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/coudanpin.css"/>
+</head>
+<body>
+<div class="header-bar border-bottom-img">
+    <div class="inner">
+        <div class="left"> <a href="index.html" class="icon-back"></a> </div>
+        <div class="center">
+            <h1>凑单品</h1>
+        </div>
+        <div class="right"> </div>
+    </div>
+</div>
+<div class="coudan-box">
+    <div class="list">
+        <div class="hd">
+            <div class="filter">
+                <ul>
+                    <li><a href="javascript:;"><span>京东</span><i></i></a></li>
+                    <li><a href="javascript:;"><span>华北</span><i></i></a></li>
+                    <li><a href="javascript:;"><span>全部价格</span><i></i></a></li>
+                </ul>
+            </div>
+            <div class="search"> <i class="icon-search"></i></div>
+            <!--各种下拉-->
+            <div class="popsort popbox" data-boxid="0">
+                <ul>
+                    <script type="text/template" id="shopName">
+
+                    <% for(var i=0;i< result.length;i++){ %>
+                    <li class="<%=i==0?'on':''%>" data-shopId="<%=result[i].shopId%>"><a href="javascript:;"><%=result[i].shopName%></a></li>
+                    <% } %>
+                    </script>
+                </ul>
+            </div>
+            <div class="popcat popbox" data-boxid="1">
+                <script type="text/template" id="shopArea">
+                    <% for(var i=0;i< result.length;i++){ %>
+                    <li class="<%=i==0?'on':''%>" data-areaId="<%=result[i].areaId%>"><a href="javascript:;"><%=result[i].areaName%></a></li>
+                    <% } %>
+                </script>
+                <ul>
+                </ul>
+            </div>
+            <div class="popprice popbox" data-boxid="2">
+            </div>
+            <div class="popsearch border-bottom-img popbox">
+            </div>
+        </div>
+        <div class="bd">
+            <script type="text/template" id="shopProduct">
+                <% for(var i=0;i< result.length;i++){ %>
+                <li>
+                    <% if(result[0].shopId==0){ %>
+                    <a href="http://item.m.jd.com/ware/view.action?wareId=1274360" class="item border-img"><div class="pic"><img src="<%=result[i].productImg%>"></div><div class="title"><%=result[i].productName%></div><div class="other"><div class="price"><%=result[i].productPrice%></div><div class="btn">
+                        <span></span>去凑单</div><div class="clearFix"></div></div></a></li>
+                    <% }else if(result[0].shopId==1){ %>
+                    <a href="http://item.m.yhd.com/item/9556252?tc=3.0.5.9556252.1&tp=5008.%E7%89%99%E7%AD%BE.185.0.1.LWyZNSn-10-FJdyo&abtest=1.281_795_1421&ti=9ZP6U9" class="item border-img"><div class="pic"><img src="<%=result[i].productImg%>"></div><div class="title"><%=result[i].productName%></div><div class="other"><div class="price"><%=result[i].productPrice%></div><div class="btn">
+                        <span></span>去凑单</div><div class="clearFix"></div></div></a></li>
+                    <% } else{ %>
+                    <a href="https://chaoshi.detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.kmvqCV&id=44166040490&skuId=96175892431&user_id=725677994&cat_id=2&is_b=1&rn=8257b4933c0243ccca605cf5c237f43c" class="item border-img"><div class="pic"><img src="<%=result[i].productImg%>"></div><div class="title"><%=result[i].productName%></div><div class="other"><div class="price"><%=result[i].productPrice%></div><div class="btn">
+                        <span></span>去凑单</div><div class="clearFix"></div></div></a></li>
+                    <% } %>
+
+                <% } %>
+            </script>
+
+            <ul class="container">
+            </ul>
+            <div class="clearFix"></div>
+        </div>
+    </div>
+    <div class="Page_loading">
+        <em><img src="images/loading.gif" width="32" height="32"></em><span></span>
+    </div>
+</div>
+<div class="backToTop"></div>
+<div class="update">
+    <ul>
+        <li>更新提示：</li>
+        <li>1.修改了"去凑单"按钮的背景颜色，增加了对应电商的图标！</li>
+        <li>2.添加了一个主页功能的小图标！可以随便拖！！</li>
+        <li>3.关闭了价格检索和排序功能！因为后台大叔相亲去了！！</li>
+        <li><button>我知道了啊啊啊</button></li>
+    </ul>
+
+</div>
+<div class="fixedNav">
+<div class="menu">
+    <script type="text/template" id="coudanIndex">
+            <% for(var i=0;i< result.length;i++){ %>
+            <li>
+                <a href="<%=i==7?'javascript:void(0)':result[i].titlehref%>">
+                    <%=#result[i].img%>
+                    <p><%=result[i].name%></p>
+                </a>
+            </li>
+            <% } %>
+    </script>
+    <ul class="clearFix">
+
+    </ul>
+</div>
+</div>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/template-native.js"></script>
+<script src="js/coudanpin.js"></script>
+</body>
+</html>
