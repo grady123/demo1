@@ -9,12 +9,16 @@ window.onload= function () {
 
 function nav_hs(){
     $.ajax({
-        url:'http://mmb.ittun.com/api/getindexmenu',
+        // url:'http://mmb.ittun.com/api/getindexmenu',
+        url:'./js/index.json',
         type:'get',
         data:{},
         success: function (result) {
-            //console.log(result);
-            var html=template("nav_temp",result);
+            var a=JSON.parse(result)
+          
+            console.log(a);
+            var html=template("nav_temp",a);
+
             $(".nav_ul").html(html);
             nav();
             //$('.nav_ul').children().eq(0).children().attr({'href':'category.html'});
